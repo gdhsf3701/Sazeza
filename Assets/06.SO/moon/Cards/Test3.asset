@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d12dca5bdbf24d4ab036c5e3d957e62, type: 3}
   m_Name: Test3
   m_EditorClassIdentifier: 
-  <cardSprite>k__BackingField: {fileID: -2135585597343286014, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
-  isStone: 0
-  <isStrange>k__BackingField: 1
+  <CardSprite>k__BackingField: {fileID: -2135585597343286014, guid: 5aa8b770bc43046bc8d993d0d5b7f4a5, type: 3}
+  IsStone: 0
+  <Score>k__BackingField: 0
+  <CleanRate>k__BackingField: 0
+  <IsStrange>k__BackingField: 1

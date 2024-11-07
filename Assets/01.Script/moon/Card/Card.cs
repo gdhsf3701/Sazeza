@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public CardTypeSO myCard;
+    public IngredientTypeSO myCard;
     public SpriteRenderer myRenderer;
     private void Start()
     {
         myRenderer = GetComponent<SpriteRenderer>();
-        myRenderer.sprite = myCard.CardSprite;
+        myRenderer.sprite = myCard.sprite;
     }
 }

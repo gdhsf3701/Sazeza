@@ -10,8 +10,8 @@ public class CardSetting : MonoBehaviour
     [SerializeField]private int xCardMany;
     [SerializeField]private int yCardMany;
     [SerializeField]private float distance = 0.1f;
-    [SerializeField]CardTypeListSO cardData;
-    List<CardTypeSO> cards = new List<CardTypeSO>();
+    [SerializeField]IngredientTypeListSO cardData;
+    List<IngredientTypeSO> cards = new List<IngredientTypeSO>();
     private Vector2 startVetor;
     private Vector2 nowVecor;
     private void Awake()
@@ -19,7 +19,7 @@ public class CardSetting : MonoBehaviour
         startVetor = transform.position;
         startVetor = new Vector2(startVetor.x + prefab.transform.localScale.x/2, startVetor.y - prefab.transform.localScale.y/2);
         nowVecor = startVetor;
-        cards = cardData.cardTypeList.Concat(cardData.cardTypeList).ToList();
+        cards = cardData.ingredientTypes.Concat(cardData.ingredientTypes).ToList();
 
     }
     private void Start()
@@ -29,7 +29,7 @@ public class CardSetting : MonoBehaviour
             for(int y = 0; y < yCardMany; y++)
             {
                 int rand = Random.Range(0, cards.Count);
-                GameObject temp = Instantiate(prefab,nowVecor,Quaternion.identity);
+                GameObject temp = Instantiate(prefab,nowVecor,Quaternion.identity,transform);
                 if(temp.TryGetComponent(out Card card) && cards.Count > 0)
                 {
                     card.myCard = cards[rand];
