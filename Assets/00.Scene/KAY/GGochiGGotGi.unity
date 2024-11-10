@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 742419149}
   - component: {fileID: 742419148}
   m_Layer: 0
-  m_Name: Dargo2
+  m_Name: SecondJeaRyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 979310477}
   - component: {fileID: 979310476}
   m_Layer: 0
-  m_Name: Dargo3
+  m_Name: ThirdJeaRyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 1656007638}
   - component: {fileID: 1656007637}
   m_Layer: 0
-  m_Name: Dargo1
+  m_Name: FirstJaeRyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
