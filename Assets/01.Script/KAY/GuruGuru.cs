@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GuruGuru : MonoBehaviour
@@ -10,8 +11,8 @@ public class GuruGuru : MonoBehaviour
     private int rotationDirection;
 
     void Start()
-    { 
-        RandomGuru();
+    {
+        StartCoroutine(RandomGuru());
     }
 
     void Update()
@@ -29,23 +30,17 @@ public class GuruGuru : MonoBehaviour
         {
             StopRotation();
         }
-        if(Input.GetKeyDown (KeyCode.D))
-        {
-            DasiSet();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            rotationSpeed++;
-        }
+       
     }
     
 
 
-    private void RandomGuru()
+    IEnumerator RandomGuru()
     {
-        rotationSpeed = UnityEngine.Random.Range(150f, 400f);  
+        rotationSpeed = UnityEngine.Random.Range(300, 400);  
         rotationDirection = UnityEngine.Random.Range(0, 2) == 0 ? 1 : -1; 
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(RandomGuru());
     }
 
     
@@ -53,16 +48,11 @@ public class GuruGuru : MonoBehaviour
     {
         isRotating = true;
     }
-
-
     public void StopRotation()
     {
         isRotating = false;
     }
 
-  
-    public void DasiSet()
-    {
-        RandomGuru();
-    }
+
+   
 }
