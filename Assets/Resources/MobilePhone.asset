@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0243573a513fc74a8b06ca67b121955, type: 3}
   m_Name: MobilePhone
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: f3a2d84be90048041a01a1bf75cf541c, type: 3}
   dirtyRate: 100
   ToolTip: "\uB0B4 \uC190\uC5D0\uC11C \uB5BC\uC5B4\uB0BC \uC218 \uC5C6\uC5B4"

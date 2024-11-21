@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0243573a513fc74a8b06ca67b121955, type: 3}
   m_Name: WhiteTteok
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: fcbbd107aaacc364eab1bb4187f89160, type: 3}
   dirtyRate: 100
   ToolTip: "\uADFC\uBCF8 \uB77C\uC774\uC2A4\uCF00\uC775"
