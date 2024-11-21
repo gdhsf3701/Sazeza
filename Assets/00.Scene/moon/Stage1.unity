@@ -384,8 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a63f12acc5f6e4ea7476da9d6f1f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  nullCard: {fileID: 0}
+  prefab: {fileID: 3395000453345498726, guid: 136f0151f59b6944daffba0ac3636db7, type: 3}
+  nullCard: {fileID: 6674439938040614847, guid: 6bffb46f57cdc254c99f0377e6858798, type: 3}
   xCardMany: 0
   yCardMany: 0
   distance: 0.1
@@ -532,6 +532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111210267}
+  - component: {fileID: 1111210268}
   m_Layer: 0
   m_Name: Stage1
   m_TagString: Untagged
@@ -554,6 +555,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111210268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111210266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5d21dc1efea474e90d3d47f21b6837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ingredient: 
 --- !u!1 &1518359570
 GameObject:
   m_ObjectHideFlags: 0
