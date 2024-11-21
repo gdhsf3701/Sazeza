@@ -69,17 +69,16 @@ public class GameManager : MonoBehaviour
         foreach (IngredientTypeEnum ingredientType in Enum.GetValues(typeof(IngredientTypeEnum)))
         {
             string enumName = ingredientType.ToString();
-            string[] guids = AssetDatabase.FindAssets($"t:IngredientTypeSO {enumName}");
-            if (guids.Length > 0)
+            IngredientTypeSO ingredientTypeSO = Resources.Load<IngredientTypeSO>(enumName);
+
+            if (ingredientTypeSO != null)
             {
-                string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                IngredientTypeSO ingredientTypeSO = AssetDatabase.LoadAssetAtPath<IngredientTypeSO>(path);
                 IngredientSO.Add(ingredientType, ingredientTypeSO);
                 Debug.Log($"Loaded {ingredientTypeSO.name} for {ingredientType}");
             }
             else
             {
-                Debug.LogWarning($"ScriptableObject for {enumName} not found.");
+                Debug.LogWarning($"ScriptableObject for {enumName} not found in Resources.");
             }
         }
     }

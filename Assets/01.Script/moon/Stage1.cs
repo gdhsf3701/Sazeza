@@ -20,7 +20,7 @@ public class Stage1 : MonoBehaviour
         {
             Ingredient.Add(IngredentSetting());
         }
-        Timer = 4f;
+        Timer = 10f;
     }
     private void Start()
     {
