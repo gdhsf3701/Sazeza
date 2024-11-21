@@ -1,8 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public enum IngredientTypeEnum
 {
@@ -36,6 +35,9 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager Instance { get; private set; }
     public int Score { get; private set; }
+    public List<IngredientTypeEnum> Ingredient { get; private set; }
+    public event Action<IngredientTypeEnum> OnIngredientAdd;
+    public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }  
 
     private void Awake()
     {
@@ -45,19 +47,45 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
-        Score = 0;
         DontDestroyOnLoad(gameObject);
-        int rand = Random.Range(0,Enum.GetValues(typeof(IngredientTypeEnum)).Length);
+        Initialize();
     }
-    public void ScoreUp(int scoreUp)
+    public void AddIngredient(IngredientTypeEnum add)
     {
-        Score += scoreUp;
+        Ingredient.Add(add);
+        OnIngredientAdd?.Invoke(add);
     }
-    public void ScoreDown(int scoreDown)
+    private void Initialize()
     {
-        Score += scoreDown;
+        Score = 0;
+        Ingredient = new List<IngredientTypeEnum>();
+        IngredientSO = new Dictionary<IngredientTypeEnum, IngredientTypeSO>();
+        DictionaryInitialize();
+    }
+    private void DictionaryInitialize()
+    {
+        foreach (IngredientTypeEnum ingredientType in Enum.GetValues(typeof(IngredientTypeEnum)))
+        {
+            string enumName = ingredientType.ToString();
+            string[] guids = AssetDatabase.FindAssets($"t:IngredientTypeSO {enumName}");
+            if (guids.Length > 0)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guids[0]);
+                IngredientTypeSO ingredientTypeSO = AssetDatabase.LoadAssetAtPath<IngredientTypeSO>(path);
+                IngredientSO.Add(ingredientType, ingredientTypeSO);
+                Debug.Log($"Loaded {ingredientTypeSO.name} for {ingredientType}");
+            }
+            else
+            {
+                Debug.LogWarning($"ScriptableObject for {enumName} not found.");
+            }
+        }
+    }
+    public void ScoreCange(int scoreCangeRange)
+    {
+        Score += scoreCangeRange;
     }
     
 }

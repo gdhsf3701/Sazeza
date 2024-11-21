@@ -7,6 +7,6 @@ using UnityEngine;
 public class IngredientTypeSO : ScriptableObject
 {
     public Sprite sprite;
-    public bool IsStrange;
-    public IngredientTypeEnum IngredientType;
+    public int dirtyRate = 100;
+    public string ToolTip;
 }
