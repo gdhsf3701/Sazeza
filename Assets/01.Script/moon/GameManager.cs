@@ -34,10 +34,12 @@ public enum IngredientTypeEnum
 public class GameManager : MonoBehaviour
 {
     static public GameManager Instance { get; private set; }
-    public int Score { get; private set; }
+    [field:SerializeField]public int Score { get; private set; }
     public List<IngredientTypeEnum> Ingredient { get; private set; }
     public event Action<IngredientTypeEnum> OnIngredientAdd;
-    public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }  
+    public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }
+    public Dictionary<IngredientTypeEnum, int> IngredientScore { get; private set; }
+    public Dictionary<IngredientTypeEnum, int> IngredientDirtyRate { get; private set; }
 
     private void Awake()
     {
@@ -57,11 +59,17 @@ public class GameManager : MonoBehaviour
         Ingredient.Add(add);
         OnIngredientAdd?.Invoke(add);
     }
+    public IngredientTypeSO GetIngredint(int i)
+    {
+        return IngredientSO[Ingredient[i]];
+    }
     private void Initialize()
     {
         Score = 0;
         Ingredient = new List<IngredientTypeEnum>();
         IngredientSO = new Dictionary<IngredientTypeEnum, IngredientTypeSO>();
+        IngredientScore = new Dictionary<IngredientTypeEnum, int>();
+        IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
         DictionaryInitialize();
     }
     private void DictionaryInitialize()
