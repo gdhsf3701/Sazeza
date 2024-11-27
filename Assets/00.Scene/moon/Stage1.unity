@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -369,7 +369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -960, y: 539.95}
+  m_AnchoredPosition: {x: -764, y: 356}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694339657
@@ -386,9 +386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 3395000453345498726, guid: 136f0151f59b6944daffba0ac3636db7, type: 3}
   nullCard: {fileID: 6674439938040614847, guid: 6bffb46f57cdc254c99f0377e6858798, type: 3}
-  xCardMany: 0
-  yCardMany: 0
-  distance: 0.1
+  xCardMany: 4
+  yCardMany: 7
+  distance: 250
 --- !u!1 &1042785218
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,8 +662,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 230945795}
   - {fileID: 694339656}
+  - {fileID: 230945795}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

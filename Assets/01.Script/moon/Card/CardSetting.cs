@@ -46,9 +46,8 @@ public class CardSetting : MonoBehaviour
                 {
                     int rand = Random.Range(0, cards.Count);
                     GameObject temp = Instantiate(prefab,nowVecor,Quaternion.identity,transform);
-                    if(temp.transform.GetChild(0).TryGetComponent(out Card card) && cards.Count > 0)
+                    if(temp.transform.TryGetComponent(out Card card) && cards.Count > 0)
                     {
-                        card.myCard = cards[rand];
                         card.myCard = cards[rand];
                         cards.RemoveAt(rand);
                     }
@@ -57,9 +56,9 @@ public class CardSetting : MonoBehaviour
                 {
                     Instantiate(nullCard, nowVecor, Quaternion.identity, transform);
                 }
-                nowVecor = new Vector2(nowVecor.x + distance + prefab.transform.localScale.x, nowVecor.y);
+                nowVecor = new Vector2(nowVecor.x + distance + prefab.transform.GetChild(0).localScale.x, nowVecor.y);
             }
-            nowVecor = new Vector2(startVetor.x, nowVecor.y - distance - prefab.transform.localScale.y);
+            nowVecor = new Vector2(startVetor.x, nowVecor.y - distance - prefab.transform.GetChild(0).localScale.y);
         }
     }
 }
