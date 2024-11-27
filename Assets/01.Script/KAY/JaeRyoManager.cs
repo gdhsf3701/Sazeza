@@ -10,6 +10,6 @@ public class JaeRyoManager : MonoBehaviour
 
     private void Awake()
     {
-       
+      
     }
 }
