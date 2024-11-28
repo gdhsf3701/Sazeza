@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool canWater = true;
+    private void OnDisable()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        canWater = true;
     }
 }
