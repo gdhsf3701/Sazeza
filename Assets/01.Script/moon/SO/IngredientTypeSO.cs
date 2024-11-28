@@ -13,7 +13,6 @@ public class IngredientTypeSO : ScriptableObject
     [Header("IngredientCost")]
     public int Tire = 1;
     public int cost = 0;
-    public bool isBuyed = true;
 
     public int PlusScore()
     {

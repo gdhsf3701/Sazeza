@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }
     public Dictionary<IngredientTypeEnum, int> IngredientScore { get; private set; }
     public Dictionary<IngredientTypeEnum, int> IngredientDirtyRate { get; private set; }
+    public Dictionary<IngredientTypeEnum, bool> IngredientIsBuy { get; private set; }
     public IngredientTypeEnum nowIngredientType { get; set; }
 
     private void Awake()
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour
         IngredientSO = new Dictionary<IngredientTypeEnum, IngredientTypeSO>();
         IngredientScore = new Dictionary<IngredientTypeEnum, int>();
         IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
+        IngredientIsBuy = new Dictionary<IngredientTypeEnum, bool>();
         DictionaryInitialize();
     }
     private void DictionaryInitialize()
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
             if (ingredientTypeSO != null)
             {
                 IngredientSO.Add(ingredientType, ingredientTypeSO);
-                Debug.Log($"Loaded {ingredientTypeSO.name} for {ingredientType}");
+                IsBuyInitialize(ingredientType);
             }
             else
             {
@@ -107,9 +109,26 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    private void IsBuyInitialize(IngredientTypeEnum ingredientType)
+    {
+        if (IngredientSO[ingredientType].Tire >= 4)
+        {
+            IngredientIsBuy.Add(ingredientType, true);
+        }
+        else
+        {
+            IngredientIsBuy.Add(ingredientType, false);
+        }
+    }
     public void ScoreCange(int scoreCangeRange)
     {
         Coin += scoreCangeRange;
     }
-    
+    public void ResetIngredient()
+    {
+        Ingredient = new List<IngredientTypeEnum>();
+        IngredientScore = new Dictionary<IngredientTypeEnum, int>();
+        IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
+    }
+
 }
