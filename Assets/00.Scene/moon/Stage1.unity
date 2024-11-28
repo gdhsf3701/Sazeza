@@ -369,7 +369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -764, y: 356}
+  m_AnchoredPosition: {x: -404, y: 190}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694339657
@@ -388,7 +388,7 @@ MonoBehaviour:
   nullCard: {fileID: 6674439938040614847, guid: 6bffb46f57cdc254c99f0377e6858798, type: 3}
   xCardMany: 4
   yCardMany: 7
-  distance: 250
+  distance: 200
 --- !u!1 &865054913
 GameObject:
   m_ObjectHideFlags: 0
