@@ -1,2 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center; align-self: center; align-items: flex-end;">
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ShotButton" style="flex-shrink: 1; width: 197px; height: 100px;" />
+    </ui:VisualElement>
 </ui:UXML>

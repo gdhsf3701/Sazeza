@@ -11,8 +11,8 @@ public class Stage1 : MonoBehaviour
 {
     public List<IngredientTypeEnum> Ingredient;
     public event Action OnCanSelect;
-    private float Timer;
-    private bool isFirst;
+    private float timer = 10f;
+    private bool isFirst = true;
     private int nowIngredientCount => GameManager.Instance.Ingredient.Count;
     private void Awake()
     {
@@ -20,7 +20,6 @@ public class Stage1 : MonoBehaviour
         {
             Ingredient.Add(IngredentSetting());
         }
-        Timer = 10f;
     }
     private void Start()
     {
@@ -31,8 +30,13 @@ public class Stage1 : MonoBehaviour
     {
         if (Ingredient.Contains(add))
         {
-            GameManager.Instance.ScoreCange(500);
+            GameManager.Instance.IngredientScore.Add(add,500 + GameManager.Instance.IngredientSO[add].PlusScore());
         }
+        else
+        {
+            GameManager.Instance.IngredientScore.Add(add, 500 - (GameManager.Instance.IngredientSO[add].PlusScore()/2));
+        }
+        GameManager.Instance.IngredientDirtyRate.Add(add, 100);
         if (nowIngredientCount >= 3)
         {
             SceneManager.LoadScene("Stage2");
@@ -40,11 +44,12 @@ public class Stage1 : MonoBehaviour
     }
     private void Update()
     {
-        Timer -= Time.deltaTime;
-        if(Timer <= 0)
+        timer -= Time.deltaTime;
+        if(timer <= 0)
         {
             if (isFirst)
             {
+                timer = 10f;
                 IsFirstSetting();
             }
             else
@@ -55,21 +60,28 @@ public class Stage1 : MonoBehaviour
     }
     private IngredientTypeEnum IngredentSetting()
     {
-        IngredientTypeEnum randomIngredient = (IngredientTypeEnum)Random.Range(0, Enum.GetValues(typeof(IngredientTypeEnum)).Length);
-        if (Ingredient.Contains(randomIngredient))
+        IngredientTypeEnum[] allIngredients = (IngredientTypeEnum[])Enum.GetValues(typeof(IngredientTypeEnum));
+        List<IngredientTypeEnum> validIngredients = new List<IngredientTypeEnum>();
+
+        foreach (var ingredient in allIngredients)
         {
-            return randomIngredient;
+            if (!Ingredient.Contains(ingredient))
+            {
+                validIngredients.Add(ingredient);
+            }
         }
-        else
+
+        if (validIngredients.Count == 0)
         {
-            return IngredentSetting();
+            throw new InvalidOperationException("조건을 만족하는 재료가 없습니다.");
         }
+
+        return validIngredients[Random.Range(0, validIngredients.Count)];
     }
     private void IsFirstSetting()
     {
         isFirst = false;
         OnCanSelect?.Invoke();
-        Timer = 10f;
         UIManager.Instance.gameObjects[0].SetActive(false);
     }
     private void ToolTipSetting()
