@@ -12,13 +12,15 @@ public class MouseClickCheck : MonoBehaviour
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-
-            if(hit.transform.TryGetComponent(out Water water))
+            if (hit)
             {
-                if(water.canWater)
+                if (hit.transform.TryGetComponent(out Water water))
                 {
-                    water.canWater = false;
-                    SetDartyRate();
+                    if(water.canWater)
+                    {
+                        water.canWater = false;
+                        SetDartyRate();
+                    }
                 }
             }
         }
