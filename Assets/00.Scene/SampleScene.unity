@@ -217,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 121115219}
   - component: {fileID: 121115218}
+  - component: {fileID: 121115220}
   m_Layer: 0
   m_Name: SauceBall
   m_TagString: Untagged
@@ -292,6 +293,19 @@ Transform:
   - {fileID: 389125390}
   m_Father: {fileID: 338689783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121115220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121115217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1489c0ccba7a27848a56d637ba43c78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  so: {fileID: 11400000, guid: 482664375ad96aa4b9eb7f34ecfec41a, type: 2}
 --- !u!1 &321386546
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +364,7 @@ SpriteRenderer:
   m_SortingLayerID: -206676003
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5696b57488f1584ab258992126ef4bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -554,6 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 380580283}
   - component: {fileID: 380580284}
+  - component: {fileID: 380580285}
   m_Layer: 0
   m_Name: Spoon
   m_TagString: Untagged
@@ -629,6 +644,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &380580285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380580282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1489c0ccba7a27848a56d637ba43c78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  so: {fileID: 11400000, guid: 34b5ad014f62ffe44ac9d9a71a5d2333, type: 2}
 --- !u!1 &389125389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,6 +1960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1663140593}
+  - component: {fileID: 1663140594}
   m_Layer: 0
   m_Name: Dango
   m_TagString: Untagged
@@ -1956,6 +1985,19 @@ Transform:
   - {fileID: 735544880}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663140594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663140592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1489c0ccba7a27848a56d637ba43c78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  so: {fileID: 11400000, guid: 2d4a9fd95a240da4fab7eda56d26e956, type: 2}
 --- !u!1 &1693413617
 GameObject:
   m_ObjectHideFlags: 0
