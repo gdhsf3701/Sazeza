@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager Instance { get; private set; }
     [field:SerializeField]public int Coin { get; private set; }
-    public List<IngredientTypeEnum> Ingredient { get; private set; }
+    [field:SerializeField]public List<IngredientTypeEnum> Ingredient { get; private set; }
     public event Action<IngredientTypeEnum> OnIngredientAdd;
     public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }
     public Dictionary<IngredientTypeEnum, int> IngredientScore { get; private set; }
