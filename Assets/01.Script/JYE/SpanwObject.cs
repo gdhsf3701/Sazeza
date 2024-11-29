@@ -4,34 +4,30 @@ using UnityEngine;
 
 public class SpanwObject : MonoBehaviour
 {
-    public List<GameObject> prefabs;//스폰할 프리팹들
+    public GameObject prefabsObject;//스폰할 프리팹
+    public GameObject parent;//부모
 
-    public List<GameObject> parent;//부모
+    public List<GameObject> prefabs;
 
     private void Awake()
     {
         Spanw();
     }
 
-    private void Parent() //부모들 만들기
+    private void Parent() //부모 만들기
     {
-        for (int i = 0; i < prefabs.Count; i++)
-        {
-            parent.Add(new GameObject(prefabs[i].name + "_Prefabs"));
-        }
+        parent = new GameObject(prefabsObject.name + "_Prefabs");
     }
 
     private void Spanw() //스폰하기
     {
-        Parent();
-        for(int i = 0; i < prefabs.Count; i++)
+        //Parent();
+        for (int j = 0; j < 10; j++)
         {
-            for(int j = 0; j <10; j++)
-            {
-                GameObject newPrefabs = Instantiate(prefabs[i]); //생성
-                newPrefabs.SetActive(false);
-                newPrefabs.transform.SetParent(parent[i].transform); //부모설정
-            }
+            GameObject newPrefabs = Instantiate(prefabsObject,transform); //생성
+            newPrefabs.SetActive(false);
+            //newPrefabs.transform.SetParent(parent.transform); //부모설정
+            prefabs.Add(newPrefabs);
         }
     }
 }
