@@ -47,9 +47,9 @@ public class MouseDango : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Sauce>(out Sauce sauce))
         {
             SauceScoreSO so = sauce.so;
-            mySO.sauceScore += so.type == SauceObjectType.SauceBall? so.sauceScore : -so.sauceScore;//소스 더하기
+            sauce.sauceScore += so.type == SauceObjectType.SauceBall? sauce.sauceScore : -sauce.sauceScore;//소스 더하기
             
-            mySO.sauceText.text = mySO.sauceScore.ToString(); //소스 점수 보이기
+            mySO.sauceText.text = sauce.sauceScore.ToString(); //소스 점수 보이기
         }
     }
 }

@@ -5,29 +5,41 @@ using UnityEngine;
 public class SpanwObject : MonoBehaviour
 {
     public GameObject prefabsObject;//스폰할 프리팹
-    public GameObject parent;//부모
 
     public List<GameObject> prefabs;
+    [SerializeField] private float spanwTime; //생성할 간격
 
     private void Awake()
     {
-        Spanw();
+        Pool();
     }
 
-    private void Parent() //부모 만들기
+    private void Start()
     {
-        parent = new GameObject(prefabsObject.name + "_Prefabs");
+        StartCoroutine(Spanw());
     }
 
-    private void Spanw() //스폰하기
+    private void Pool() //생성하기
     {
         //Parent();
         for (int j = 0; j < 10; j++)
         {
             GameObject newPrefabs = Instantiate(prefabsObject,transform); //생성
             newPrefabs.SetActive(false);
-            //newPrefabs.transform.SetParent(parent.transform); //부모설정
             prefabs.Add(newPrefabs);
+        }
+    }
+
+    private IEnumerator Spanw() //활성화
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spanwTime);
+
+            GameObject newPrefabs = prefabs[0];
+            newPrefabs.SetActive(true);
+
+            prefabs.Remove(newPrefabs);
         }
     }
 }

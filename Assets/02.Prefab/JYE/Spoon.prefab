@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 6861226464631266256}
   - component: {fileID: 2148060384362730341}
   - component: {fileID: 439234772800563002}
+  - component: {fileID: 725716412620481235}
   m_Layer: 0
   m_Name: Spoon
   m_TagString: Untagged
@@ -237,6 +238,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.64, y: 0.64}
   m_Direction: 0
+--- !u!114 &725716412620481235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730308028227375473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0682b7ea2b41f54ca2a4664b2d3b9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position:
+  - {x: -6, y: 8, z: 0}
+  - {x: -2, y: 8, z: 0}
+  - {x: 2, y: 8, z: 0}
+  - {x: 6, y: 8, z: 0}
 --- !u!1 &8900700878197994325
 GameObject:
   m_ObjectHideFlags: 0
