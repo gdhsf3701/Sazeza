@@ -7,7 +7,9 @@ public class MouseDango : MonoBehaviour
     private float RollSpeed = 300; //당고 돌아가는 속도
     private float Speed = 5; //당고 따라가는 속도
 
-    Vector3 mousePosition = new Vector3(0,-5,0); //당고가 따라갈 마우스 위치
+    private Vector3 mousePosition = new Vector3(0,-5,0); //당고가 따라갈 마우스 위치
+
+    public SauceScoreSO mySO;
 
     private void Update()
     {
@@ -38,5 +40,16 @@ public class MouseDango : MonoBehaviour
     private void RollDango() //당고를 돌림
     {
         transform.Rotate(new Vector3(0, 0, RollSpeed * Time.deltaTime));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<Sauce>(out Sauce sauce))
+        {
+            SauceScoreSO so = sauce.so;
+            sauce.sauceScore += so.type == SauceObjectType.SauceBall? sauce.sauceScore : -sauce.sauceScore;//소스 더하기
+            
+            mySO.sauceText.text = sauce.sauceScore.ToString(); //소스 점수 보이기
+        }
     }
 }
