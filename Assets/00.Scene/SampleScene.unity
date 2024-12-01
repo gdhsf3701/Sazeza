@@ -1398,6 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 2d4a9fd95a240da4fab7eda56d26e956, type: 2}
+  sauceScore: 0
 --- !u!50 &1663140596
 Rigidbody2D:
   serializedVersion: 4
