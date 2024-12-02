@@ -37,11 +37,10 @@ public class ObjectPlace : MonoBehaviour
         transform.position = position[Random.Range(0, position.Count)];
     }
 
-    private IEnumerator UpgradeSpeed()
-    {
-        yield return new WaitForSeconds(1);
-        speed += speed + Time.deltaTime;
-    }
+    //private IEnumerator UpgradeSpeed()
+    //{
+
+    //}
 
     private void OnCollisionStay2D(Collision2D collision)
     {
