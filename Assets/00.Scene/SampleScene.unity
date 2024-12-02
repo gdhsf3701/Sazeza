@@ -1551,7 +1551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabsObject: {fileID: 4538553064645774142, guid: 6f6ecd154fe738a488cbca2430d2e4c1, type: 3}
   prefabs: []
-  spanwTime: 2
+  spanwTime: 4
 --- !u!4 &2056184634
 Transform:
   m_ObjectHideFlags: 0
