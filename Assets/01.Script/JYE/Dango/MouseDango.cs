@@ -7,9 +7,18 @@ public class MouseDango : MonoBehaviour
     private float RollSpeed = 300; //당고 돌아가는 속도
     private float Speed = 5; //당고 따라가는 속도
 
-    private Vector3 mousePosition = new Vector3(0,-5,0); //당고가 따라갈 마우스 위치
+    private Vector3 mousePosition = new Vector3(0, -5, 0); //당고가 따라갈 마우스 위치
 
+    private Rigidbody2D myRigid;
+
+    private Sauce sauce;
     public SauceScoreSO mySO;
+
+    private void Awake()
+    {
+        myRigid = GetComponentInParent<Rigidbody2D>();
+        sauce = GetComponentInParent<Sauce>();
+    }
 
     private void Update()
     {
@@ -21,13 +30,13 @@ public class MouseDango : MonoBehaviour
     {
         Vector3 mouse = Camera.main.ScreenToViewportPoint(Input.mousePosition); //마우스 위치 (0,0,0 ~ 1,1,1)
 
-        if(mouse.x >= 0 && mouse.y >= 0 && mouse.x <= 1 && mouse.y <= 1)//움직이는 부분 (화면 안)
+        if (mouse.x >= 0 && mouse.y >= 0 && mouse.x <= 1 && mouse.y <= 1)//움직이는 부분 (화면 안)
         {
             mousePosition = MousePosition(); //당고가 따라갈 마우스 위치 받기
         }
 
         Vector3 myPosition = gameObject.transform.parent.position; //본인 위치
-        gameObject.transform.parent.position = Vector3.Lerp(myPosition, mousePosition, Speed * Time.deltaTime); //천천히 따라가라고
+        myRigid.MovePosition(Vector3.Lerp(myPosition, mousePosition, Speed * Time.deltaTime));//천천히 따라가라고
     }
 
     private Vector3 MousePosition() //마우스 위치
@@ -47,9 +56,10 @@ public class MouseDango : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Sauce>(out Sauce sauce))
         {
             SauceScoreSO so = sauce.so;
-            sauce.sauceScore += so.type == SauceObjectType.SauceBall? sauce.sauceScore : -sauce.sauceScore;//소스 더하기
-            
-            mySO.sauceText.text = sauce.sauceScore.ToString(); //소스 점수 보이기
+            this.sauce.sauceScore += so.type == SauceObjectType.SauceBall ? sauce.sauceScore : -sauce.sauceScore;//소스 더하기
+            print(sauce.sauceScore);
+
+            this.sauce.sauceText.text = this.sauce.sauceScore.ToString(); //소스 점수 보이기
         }
     }
 }

@@ -10,7 +10,7 @@ public class ObjectPlace : MonoBehaviour
     [SerializeField] private GameObject parent; //부모
     public GameObject Parent { get; set; }
 
-    private float speed = 0.01f; //내려가는 속도
+    private static float speed = 0.01f; //내려가는 속도
 
     private void Awake()
     {
@@ -20,6 +20,7 @@ public class ObjectPlace : MonoBehaviour
     private void OnEnable()
     {
         StartPosition();
+        StartCoroutine(UpgradeSpeed());
     }
 
     private void Update()
@@ -39,20 +40,10 @@ public class ObjectPlace : MonoBehaviour
 
     private IEnumerator UpgradeSpeed()
     {
-        yield return new WaitForSeconds(1);
-        speed += speed + Time.deltaTime;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.TryGetComponent<Sauce>(out Sauce sauce)) //만약 겹쳐지면 다시 스폰
+        while (true)
         {
-            SauceScoreSO so = sauce.so;
-            if (so.type != SauceObjectType.Dango)
-            {
-                StartPosition();
-                print("그래");
-            }
+            yield return new WaitForSeconds(1.2f);
+            speed += 0.01f;
         }
     }
 }

@@ -9,9 +9,11 @@ public class Sauce : MonoBehaviour
 
     public int sauceScore;
 
+    public TextMeshProUGUI sauceText;
+
     private void Awake()
     {
-        so.sauceText = transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+        sauceText = transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
     }
 
 
@@ -22,8 +24,8 @@ public class Sauce : MonoBehaviour
 
     private void Grant()
     {
-        sauceScore = so.type != SauceObjectType.Dango?Random.Range(1, 16): 5/*기본으로 주어지는 당고 점수*/; //당고가 아니라면 소스 점수 랜덤으로 정하기
+        sauceScore = so.type != SauceObjectType.Dango ? Random.Range(1, 16) : 5/*기본으로 주어지는 당고 점수*/; //당고가 아니라면 소스 점수 랜덤으로 정하기
 
-        so.sauceText.text = sauceScore.ToString(); //소스 점수 보이기
+        sauceText.text = sauceScore.ToString(); //소스 점수 보이기
     }
 }

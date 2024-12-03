@@ -6,7 +6,6 @@ using TMPro;
 [CreateAssetMenu(menuName = "SO/JYE/SauceScore")]
 public class SauceScoreSO : ScriptableObject
 {
-    public TextMeshProUGUI sauceText; //텍스트
     public SauceObjectType type; //종류
 }
 
