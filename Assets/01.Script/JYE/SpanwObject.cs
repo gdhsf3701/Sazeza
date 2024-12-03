@@ -35,7 +35,6 @@ public class SpanwObject : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spanwTime);
             if(prefabs.Count == 0)
             {
                 prefabs.Add(Instantiate(prefabsObject, transform));
@@ -44,6 +43,7 @@ public class SpanwObject : MonoBehaviour
             newPrefabs.SetActive(true);
 
             prefabs.Remove(newPrefabs);
+            yield return new WaitForSeconds(spanwTime);
         }
     }
 

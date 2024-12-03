@@ -6,12 +6,19 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private float _time;
+    public float Timetime { get; set; }
     private bool isDone = false;
     public event Action OnTimerEnd;
+
+    private void Awake()
+    {
+        Timetime = _time;
+    }
+
     private void Update()
     {
-        _time -= Time.deltaTime;
-        if(_time <= 0 && !isDone)
+        Timetime -= Time.deltaTime;
+        if(Timetime <= 0 && !isDone)
         {
             isDone = true;
             OnTimerEnd?.Invoke();

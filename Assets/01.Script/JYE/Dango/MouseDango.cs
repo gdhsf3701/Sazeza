@@ -57,7 +57,6 @@ public class MouseDango : MonoBehaviour
         {
             SauceScoreSO so = sauce.so;
             this.sauce.sauceScore += so.type == SauceObjectType.SauceBall ? sauce.sauceScore : -sauce.sauceScore;//소스 더하기
-            print(sauce.sauceScore);
 
             this.sauce.sauceText.text = this.sauce.sauceScore.ToString(); //소스 점수 보이기
         }
