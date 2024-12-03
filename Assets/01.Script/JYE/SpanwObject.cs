@@ -36,7 +36,10 @@ public class SpanwObject : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spanwTime);
-
+            if(prefabs.Count == 0)
+            {
+                prefabs.Add(Instantiate(prefabsObject, transform));
+            }
             GameObject newPrefabs = prefabs[0];
             newPrefabs.SetActive(true);
 

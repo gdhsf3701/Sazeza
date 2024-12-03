@@ -36,13 +36,15 @@ public class GameManager : MonoBehaviour
     static public GameManager Instance { get; private set; }
     [field:SerializeField]public int Coin { get; private set; }
     [field:SerializeField]public List<IngredientTypeEnum> Ingredient { get; private set; }
-    public event Action<IngredientTypeEnum> OnIngredientAdd;
     public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }
+    #region StagesIngredient
     public Dictionary<IngredientTypeEnum, int> IngredientScore { get; private set; }
+    public event Action<IngredientTypeEnum> OnIngredientAdd;
     public Dictionary<IngredientTypeEnum, int> IngredientDirtyRate { get; private set; }
     public Dictionary<IngredientTypeEnum, bool> IngredientIsBuy { get; private set; }
     public IngredientTypeEnum nowIngredientType { get; set; }
-
+    #endregion
+    #region FirstIngredientSetting
     private void Awake()
     {
         if(Instance == null)
@@ -55,45 +57,6 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         Initialize();
-    }
-    public void AddIngredient(IngredientTypeEnum add)
-    {
-        Ingredient.Add(add);
-        OnIngredientAdd?.Invoke(add);
-    }
-    public void IngredientDirtyRateMinus(IngredientTypeEnum ingredientType , int rate)
-    {
-        IngredientDirtyRate[ingredientType] -= rate;
-        if(IngredientDirtyRate[ingredientType] <= 0)
-        {
-            IngredientDirtyRate[ingredientType] = 0;
-        }
-    }
-    public void IngredientDirtyRatePlus(IngredientTypeEnum ingredientType , int rate)
-    {
-        IngredientDirtyRate[ingredientType] += rate;
-        if (IngredientDirtyRate[ingredientType] <= 100)
-        {
-            IngredientDirtyRate[ingredientType] = 100;
-        }
-    }
-    public void DirtyRateToScore()
-    {
-        for(int i = 0;i<3;i++)
-        {
-            if (IngredientDirtyRate[Ingredient[i]] >= 100)
-            {
-                Coin -= IngredientScore[Ingredient[i]];
-            }
-            else
-            {
-                Coin += (int)(IngredientScore[Ingredient[i]] * (float)IngredientDirtyRate[Ingredient[i]] / 100f) ;
-            }
-        }
-    }
-    public IngredientTypeSO GetIngredint(int i)
-    {
-        return IngredientSO[Ingredient[i]];
     }
     private void Initialize()
     {
@@ -134,15 +97,53 @@ public class GameManager : MonoBehaviour
             IngredientIsBuy.Add(ingredientType, false);
         }
     }
-    public void ScoreCange(int scoreCangeRange)
+    #endregion
+    #region StagesIngredientSetting
+    public void AddIngredient(IngredientTypeEnum add)
     {
-        Coin += scoreCangeRange;
+        Ingredient.Add(add);
+        OnIngredientAdd?.Invoke(add);
     }
+    public void IngredientDirtyRateMinus(IngredientTypeEnum ingredientType , int rate)
+    {
+        IngredientDirtyRate[ingredientType] -= rate;
+        if(IngredientDirtyRate[ingredientType] <= 0)
+        {
+            IngredientDirtyRate[ingredientType] = 0;
+        }
+    }
+    public void IngredientDirtyRatePlus(IngredientTypeEnum ingredientType , int rate)
+    {
+        IngredientDirtyRate[ingredientType] += rate;
+        if (IngredientDirtyRate[ingredientType] <= 100)
+        {
+            IngredientDirtyRate[ingredientType] = 100;
+        }
+    }
+    public void DirtyRateToScore()
+    {
+        for(int i = 0;i<3;i++)
+        {
+            if (IngredientDirtyRate[Ingredient[i]] >= 100)
+            {
+                Coin -= IngredientScore[Ingredient[i]];
+            }
+            else
+            {
+                Coin += (int)(IngredientScore[Ingredient[i]] * (float)IngredientDirtyRate[Ingredient[i]] / 100f) ;
+            }
+        }
+    }
+    #endregion
     public void ResetIngredient()
     {
         Ingredient = new List<IngredientTypeEnum>();
         IngredientScore = new Dictionary<IngredientTypeEnum, int>();
         IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
+    }
+    public void ScoreCange(int scoreCangeRange)
+    {
+        Coin += scoreCangeRange;
     }
 
 }

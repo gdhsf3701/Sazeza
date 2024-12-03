@@ -9,11 +9,11 @@ public class Sauce : MonoBehaviour
 
     public int sauceScore;
 
-    public TextMeshProUGUI sauceText;
+    public TextMeshPro sauceText;
 
     private void Awake()
     {
-        sauceText = transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
+        sauceText = GetComponentInChildren<TextMeshPro>();
     }
 
 
