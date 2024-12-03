@@ -77,6 +77,20 @@ public class GameManager : MonoBehaviour
             IngredientDirtyRate[ingredientType] = 100;
         }
     }
+    public void DirtyRateToScore()
+    {
+        for(int i = 0;i<3;i++)
+        {
+            if (IngredientDirtyRate[Ingredient[i]] >= 100)
+            {
+                Coin -= IngredientScore[Ingredient[i]];
+            }
+            else
+            {
+                Coin += (int)(IngredientScore[Ingredient[i]] * (float)IngredientDirtyRate[Ingredient[i]] / 100f) ;
+            }
+        }
+    }
     public IngredientTypeSO GetIngredint(int i)
     {
         return IngredientSO[Ingredient[i]];

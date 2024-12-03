@@ -79,6 +79,7 @@ public class Shooting : MonoBehaviour
     }
     private void NextScene()
     {
+        GameManager.Instance.DirtyRateToScore();
         SceneManager.LoadScene("Stage4");
     }
     private void NowDelChecker()
