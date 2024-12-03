@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class GuruGuru : MonoBehaviour
 {
-    private bool isRotating = false;
     private float rotationSpeed;
     private int rotationDirection;
 
@@ -17,20 +16,7 @@ public class GuruGuru : MonoBehaviour
 
     void Update()
     {
-        if (isRotating)
-        {
-            transform.Rotate(0, 0, rotationSpeed * rotationDirection * Time.deltaTime);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            StartRotation();
-
-        }
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            StopRotation();
-        }
-       
+        transform.Rotate(0, 0, rotationSpeed * rotationDirection * Time.deltaTime);
     }
     
 
@@ -42,17 +28,4 @@ public class GuruGuru : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(RandomGuru());
     }
-
-    
-    public void StartRotation()
-    {
-        isRotating = true;
-    }
-    public void StopRotation()
-    {
-        isRotating = false;
-    }
-
-
-   
 }
