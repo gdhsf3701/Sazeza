@@ -11,7 +11,7 @@ public class Stage1 : MonoBehaviour
 {
     public List<IngredientTypeEnum> Ingredient;
     public event Action OnCanSelect;
-    private float timer = 10f;
+    private float timer = 3f;
     private bool isFirst = true;
     private int nowIngredientCount => GameManager.Instance.Ingredient.Count;
     private void Awake()

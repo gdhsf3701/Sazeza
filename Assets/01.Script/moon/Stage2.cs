@@ -15,14 +15,17 @@ public class Stage2 : MonoBehaviour
     }
     private void Initialize()
     {
-        ingredientTypes = GameManager.Instance.Ingredient;
+        foreach(var type in GameManager.Instance.Ingredient)
+        {
+            ingredientTypes.Add(type);
+        }
         int rand = Random.Range(0, GameManager.Instance.Ingredient.Count);
-        GameManager.Instance.nowIngredientType = GameManager.Instance.Ingredient[rand];
+        GameManager.Instance.nowIngredientType = ingredientTypes[rand];
         ingredientTypes.RemoveAt(rand);
     }
     public void NewIngredientType()
     {
-        if(GameManager.Instance.Ingredient.Count <= 0)
+        if(ingredientTypes.Count <= 0)
         {
             NextScene();
             return;
@@ -38,7 +41,7 @@ public class Stage2 : MonoBehaviour
     private void Update()
     {
         _timer -= Time.deltaTime;
-        if(_timer <= 0)
+        if (_timer <= 0)
         {
             NextScene();
         }
