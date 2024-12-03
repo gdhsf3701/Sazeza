@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
     public void IngredientDirtyRatePlus(IngredientTypeEnum ingredientType , int rate)
     {
         IngredientDirtyRate[ingredientType] += rate;
-        if (IngredientDirtyRate[ingredientType] <= 100)
+        if (IngredientDirtyRate[ingredientType] >= 100)
         {
             IngredientDirtyRate[ingredientType] = 100;
         }
@@ -145,5 +145,4 @@ public class GameManager : MonoBehaviour
     {
         Coin += scoreCangeRange;
     }
-
 }

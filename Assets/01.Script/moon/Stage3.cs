@@ -13,7 +13,7 @@ public class Stage3 : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0)&&!shooting.IsShooting)
+        if (Input.GetMouseButtonDown(0)&&!shooting.IsShooting)
         {
             shooting.Shoot(Vector3.up);
             shooting.IsShooting = true;
