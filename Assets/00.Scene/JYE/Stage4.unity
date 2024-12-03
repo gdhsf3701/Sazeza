@@ -855,6 +855,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b68ca3b30301d54083695c4db54adaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 669601474}
+  perfect: 0
+  text: {fileID: 1234615481}
+  DangoText: {fileID: 1234615481}
 --- !u!114 &794339354
 MonoBehaviour:
   m_ObjectHideFlags: 0
