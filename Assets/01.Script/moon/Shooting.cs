@@ -50,18 +50,15 @@ public class Shooting : MonoBehaviour
             myChild.Remove(nowChild);
             nowChild = null;
             canGetReward = false;
-            IsShooting = false;
-            rb.velocity = Vector2.zero;
+            ResetPos?.Invoke();
+            NowChildSet();
         }
     }
     private void Update()
     {
-        if(rb.velocity == Vector2.zero&&IsShooting)
+        if(rb.velocity == Vector2.zero&&IsShooting&& canGetReward)
         {
-            if(canGetReward)
-            {
-                GameManager.Instance.IngredientDirtyRatePlus(nowChild.GetComponent<MyIngredientType>().myEnum,20);
-            }
+            GameManager.Instance.IngredientDirtyRatePlus(nowChild.GetComponent<MyIngredientType>().myEnum,20);
             canGetReward = true;
             ResetPos?.Invoke();
             NowDelChecker();
@@ -69,11 +66,12 @@ public class Shooting : MonoBehaviour
     }
     public void NowChildSet()
     {
-        if(myChild == null)
+        if(myChild.Count == 0)
         {
             NextScene();
         }
-        int rand = Random.Range(0,myChild.Count);
+        canGetReward = true;
+        int rand = Random.Range(0,myChild.Count-1);
         nowChild = myChild[rand];
         nowChild.gameObject.SetActive(true);
     }
@@ -86,9 +84,12 @@ public class Shooting : MonoBehaviour
     {
         if (GameManager.Instance.IngredientDirtyRate[nowChild.GetComponent<MyIngredientType>().myEnum] >= 100)
         {
-            nowChild.gameObject.SetActive(false);
-            myChild.Remove(nowChild);
-            nowChild = null;
+            if(nowChild != null)
+            {
+                nowChild.gameObject.SetActive(false);
+                myChild.Remove(nowChild);
+                nowChild = null;
+            }
             NowChildSet();
         }
     }
