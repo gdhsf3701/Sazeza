@@ -17,6 +17,7 @@ public class SpanwObject : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Spanw());
+        StartCoroutine(UpgradeSpeed());
     }
 
     private void Pool() //持失馬奄
@@ -24,7 +25,7 @@ public class SpanwObject : MonoBehaviour
         //Parent();
         for (int j = 0; j < 10; j++)
         {
-            GameObject newPrefabs = Instantiate(prefabsObject,transform); //持失
+            GameObject newPrefabs = Instantiate(prefabsObject, transform); //持失
             newPrefabs.SetActive(false);
             prefabs.Add(newPrefabs);
         }
@@ -40,6 +41,15 @@ public class SpanwObject : MonoBehaviour
             newPrefabs.SetActive(true);
 
             prefabs.Remove(newPrefabs);
+        }
+    }
+
+    private IEnumerator UpgradeSpeed()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1.5f);
+            spanwTime -= spanwTime < 0.2f? 0: 0.1f;
         }
     }
 }
