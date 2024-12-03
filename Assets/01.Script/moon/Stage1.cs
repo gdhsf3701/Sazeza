@@ -52,10 +52,6 @@ public class Stage1 : MonoBehaviour
                 timer = 10f;
                 IsFirstSetting();
             }
-            else
-            {
-                SceneManager.LoadScene("Stage2");
-            }
         } 
     }
     private IngredientTypeEnum IngredentSetting()
