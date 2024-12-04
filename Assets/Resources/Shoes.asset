@@ -15,3 +15,5 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: b4d21db1bab442942ac7ab56e73bc7bc, type: 3}
   dirtyRate: 100
   ToolTip: "\uC774\uAC78 \uD280\uACA8\uB3C4 \uD280\uAE40\uC740 \uB9DB\uC788\uB300"
+  Tire: 4
+  cost: 0

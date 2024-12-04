@@ -34,6 +34,7 @@ public enum IngredientTypeEnum
 public class GameManager : MonoBehaviour
 {
     static public GameManager Instance { get; private set; }
+    [field:SerializeField]public int Score { get; private set; }
     [field:SerializeField]public int Coin { get; private set; }
     [field:SerializeField]public List<IngredientTypeEnum> Ingredient { get; private set; }
     public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }
@@ -62,7 +63,7 @@ public class GameManager : MonoBehaviour
     }
     private void Initialize()
     {
-        Coin = 0;
+        Score = 0;
         Ingredient = new List<IngredientTypeEnum>();
         IngredientSO = new Dictionary<IngredientTypeEnum, IngredientTypeSO>();
         IngredientScore = new Dictionary<IngredientTypeEnum, int>();
@@ -129,11 +130,11 @@ public class GameManager : MonoBehaviour
         {
             if (IngredientDirtyRate[Ingredient[i]] >= 100)
             {
-                Coin -= IngredientScore[Ingredient[i]];
+                Score -= IngredientScore[Ingredient[i]];
             }
             else
             {
-                Coin += (int)(IngredientScore[Ingredient[i]] * (float)IngredientDirtyRate[Ingredient[i]] / 100f) ;
+                Score += (int)(IngredientScore[Ingredient[i]] * (float)IngredientDirtyRate[Ingredient[i]] / 100f) ;
             }
         }
     }
@@ -143,9 +144,14 @@ public class GameManager : MonoBehaviour
         Ingredient = new List<IngredientTypeEnum>();
         IngredientScore = new Dictionary<IngredientTypeEnum, int>();
         IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
+        Score = 0;
     }
-    public void ScoreCange(int scoreCangeRange)
+    public void ScoreToCoin()
     {
-        Coin += scoreCangeRange;
+        Coin += Score / 2;
+    }
+    public void CoinCange(int coinCangeRange)
+    {
+        Coin += coinCangeRange;
     }
 }

@@ -20,7 +20,7 @@ public class Item : MonoBehaviour
         if(GameManager.Instance.Coin - GameManager.Instance.IngredientSO[MyIngredientType].cost >= 0)
         {
             GameManager.Instance.IngredientIsBuy[MyIngredientType] = true;
-            GameManager.Instance.ScoreCange(-GameManager.Instance.IngredientSO[MyIngredientType].cost);
+            GameManager.Instance.CoinCange(-GameManager.Instance.IngredientSO[MyIngredientType].cost);
             gameObject.SetActive(false);
         }
     }
