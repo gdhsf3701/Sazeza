@@ -14,15 +14,12 @@ public class Stage1 : MonoBehaviour
     private float timer = 3f;
     private bool isFirst = true;
     private int nowIngredientCount => GameManager.Instance.Ingredient.Count;
-    private void Awake()
+    private void Start()
     {
         for (int i = 0; i < 3; i++)
         {
             Ingredient.Add(IngredentSetting());
         }
-    }
-    private void Start()
-    {
         ToolkitManager.Instance.ChangeSceneName("À×");
         ToolTipSetting();
         GameManager.Instance.OnIngredientAdd += ScoreUP;
