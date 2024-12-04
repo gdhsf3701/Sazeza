@@ -369,7 +369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -416, y: 256}
+  m_AnchoredPosition: {x: -409, y: 261}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694339657
@@ -388,7 +388,7 @@ MonoBehaviour:
   nullCard: {fileID: 6674439938040614847, guid: 6bffb46f57cdc254c99f0377e6858798, type: 3}
   xCardMany: 4
   yCardMany: 7
-  distance: 200
+  distance: 205.5
 --- !u!1 &865054913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f29d47faeed1147a4f104ef8d89eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Score>k__BackingField: 0
   <Coin>k__BackingField: 0
   <Ingredient>k__BackingField: 
 --- !u!4 &2111063825

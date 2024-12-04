@@ -155,3 +155,4 @@ public class GameManager : MonoBehaviour
         Coin += coinCangeRange;
     }
 }
+    

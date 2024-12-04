@@ -26,7 +26,7 @@ public class WaterShow : MonoBehaviour
     private void Initialize()
     {
         WaterPoses = new Transform[WaterMany];
-        transform.position = new Vector3(-(prefab[0].transform.localScale.x * 2 + distance * 2), prefab[0].transform.localScale.y * 2 + distance * 2, 0);
+        //transform.position = new Vector3(-(prefab[0].transform.localScale.x * 2 + distance * 2), prefab[0].transform.localScale.y * 2 + distance * 2, 0);
         startVetor = transform.position;
         startVetor = new Vector2(startVetor.x + prefab[0].transform.localScale.x / 2, startVetor.y - prefab[0].transform.localScale.y / 2);
         nowVecor = startVetor;
