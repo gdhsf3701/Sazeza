@@ -17,9 +17,31 @@ public class CardSetting : MonoBehaviour
     List<IngredientTypeEnum> cards = new List<IngredientTypeEnum>();
     private Vector2 startVetor;
     private Vector2 nowVecor;
-    private void Awake()
+    private void Start()
     {
         Initialize();
+        for (int x = 0; x < xCardMany; x++)
+        {
+            for (int y = 0; y < yCardMany; y++)
+            {
+                if (cards.Count > 0)
+                {
+                    int rand = Random.Range(0, cards.Count);
+                    GameObject temp = Instantiate(prefab, nowVecor, Quaternion.identity, transform);
+                    if (temp.transform.TryGetComponent(out Card card) && cards.Count > 0)
+                    {
+                        card.myCard = cards[rand];
+                        cards.RemoveAt(rand);
+                    }
+                }
+                else
+                {
+                    Instantiate(nullCard, nowVecor, Quaternion.identity, transform);
+                }
+                nowVecor = new Vector2(nowVecor.x + distance + prefab.transform.GetChild(0).localScale.x, nowVecor.y);
+            }
+            nowVecor = new Vector2(startVetor.x, nowVecor.y - distance - prefab.transform.GetChild(0).localScale.y);
+        }
     }
     private void Initialize()
     {
@@ -38,30 +60,5 @@ public class CardSetting : MonoBehaviour
             }
         }
 
-    }
-    private void Start()
-    {
-        for (int x = 0; x < xCardMany; x++)
-        {
-            for(int y = 0; y < yCardMany; y++)
-            {
-                if(cards.Count > 0)
-                {
-                    int rand = Random.Range(0, cards.Count);
-                    GameObject temp = Instantiate(prefab,nowVecor,Quaternion.identity,transform);
-                    if(temp.transform.TryGetComponent(out Card card) && cards.Count > 0)
-                    {
-                        card.myCard = cards[rand];
-                        cards.RemoveAt(rand);
-                    }
-                }
-                else
-                {
-                    Instantiate(nullCard, nowVecor, Quaternion.identity, transform);
-                }
-                nowVecor = new Vector2(nowVecor.x + distance + prefab.transform.GetChild(0).localScale.x, nowVecor.y);
-            }
-            nowVecor = new Vector2(startVetor.x, nowVecor.y - distance - prefab.transform.GetChild(0).localScale.y);
-        }
     }
 }
