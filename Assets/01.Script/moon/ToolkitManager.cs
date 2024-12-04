@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.XR;
 
 public class ToolkitManager : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class ToolkitManager : MonoBehaviour
     private Label toolTip1P;
     private Label toolTip2P;
     private Label toolTip3P;
+    private VisualElement tooltipPaper;
 
 
     private void Awake()
@@ -32,7 +35,27 @@ public class ToolkitManager : MonoBehaviour
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
         var chang = root.Q<VisualElement>("Chang");
-        chang.pickingMode = PickingMode.Ignore;                                                                 
+        chang.pickingMode = PickingMode.Ignore;
+        toolTip1 = root.Q<Label>("Tooltip1");
+        toolTip2= root.Q<Label>("Tooltip2");
+        toolTip3 = root.Q<Label>("Tooltip3");
+        toolTip1P = root.Q<Label>("Tooltip1p");
+        toolTip2P = root.Q<Label>("Tooltip2p");
+        toolTip3P = root.Q<Label>("Tooltip3p");
+        tooltipPaper = root.Q<VisualElement>("TooltipPaper");
+
+        StartCoroutine(Paper());
+
+    }
+
+    IEnumerator Paper()
+    {
+        tooltipPaper.style.display = DisplayStyle.Flex;
+        
+        yield return new WaitForSeconds(3f);
+
+        tooltipPaper.style.display = DisplayStyle.None;
+        tooltipPaper.pickingMode = PickingMode.Ignore;
 
     }
 
