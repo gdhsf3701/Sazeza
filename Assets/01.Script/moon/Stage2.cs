@@ -9,6 +9,7 @@ public class Stage2 : MonoBehaviour
 {
     private List<IngredientTypeEnum> ingredientTypes = new List<IngredientTypeEnum>();
     [SerializeField] float _timer = 180;
+    [SerializeField] SpriteRenderer mouseSprite;
     private void Start()
     {
         Initialize();
@@ -23,6 +24,7 @@ public class Stage2 : MonoBehaviour
         int rand = Random.Range(0, GameManager.Instance.Ingredient.Count);
         GameManager.Instance.nowIngredientType = ingredientTypes[rand];
         ingredientTypes.RemoveAt(rand);
+        MouseSpriteChange();
     }
     public void NewIngredientType()
     {
@@ -34,7 +36,12 @@ public class Stage2 : MonoBehaviour
         int rand = Random.Range(0, ingredientTypes.Count);
         GameManager.Instance.nowIngredientType = ingredientTypes[rand];
         ingredientTypes.RemoveAt(rand);
+        MouseSpriteChange();
     }
+    public void MouseSpriteChange()
+    {
+        mouseSprite.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.nowIngredientType].sprite;
+    } 
     private void NextScene()
     {
         SceneManager.LoadScene("Stage3");
