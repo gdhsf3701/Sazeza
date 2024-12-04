@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0243573a513fc74a8b06ca67b121955, type: 3}
   m_Name: TalkingFireExtinguisher
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: d50e0ecec57ffaa44b9f0bb2a12c4cac, type: 3}
   dirtyRate: 100
   ToolTip: "\uC18C\uD654\uAE30\uB3C4 \uB9D0\uC740 \uD55C\uB2E4\uACE0? \uB084\uB07C\uB8E8
     \u314B"
+  Tire: 1
+  cost: 0

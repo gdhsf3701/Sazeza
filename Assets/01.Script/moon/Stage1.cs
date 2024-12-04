@@ -88,6 +88,7 @@ public class Stage1 : MonoBehaviour
         {
             UIManager.Instance.texts[i].text = GameManager.Instance.IngredientSO[item].ToolTip;
             i++;
+            
         }
     }
 }
