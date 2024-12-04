@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class MouseClickCheck : MonoBehaviour
 {
     [SerializeField] Stage2 stage;
+    [SerializeField] SpriteRenderer sprite;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,10 +29,13 @@ public class MouseClickCheck : MonoBehaviour
     }
     private void SetDartyRate()
     {
+        Color temp = sprite.color;
         GameManager.Instance.IngredientDirtyRateMinus(GameManager.Instance.nowIngredientType, 20);
         if (GameManager.Instance.IngredientDirtyRate[GameManager.Instance.nowIngredientType] <= 0)
         {
             stage.NewIngredientType();
         }
+        temp.a = GameManager.Instance.IngredientDirtyRate[GameManager.Instance.nowIngredientType]/100f;
+        sprite.color = temp;
     }
 }
