@@ -12,6 +12,7 @@ public class Stage2 : MonoBehaviour
     private void Start()
     {
         Initialize();
+        ToolkitManager.Instance.ChangeSceneName("นึ");
     }
     private void Initialize()
     {
