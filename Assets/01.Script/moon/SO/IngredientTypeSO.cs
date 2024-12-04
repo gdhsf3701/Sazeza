@@ -13,7 +13,28 @@ public class IngredientTypeSO : ScriptableObject
     [Header("IngredientCost")]
     public int Tire = 1;
     public int cost = 0;
-
+    private void OnValidate()
+    {
+        UpdateCost();
+    }
+    private void UpdateCost()
+    {
+        switch (Tire)
+        {
+            case 1:
+                cost = 5000;
+                break;
+            case 2:
+                cost = 4000;
+                break;
+            case 3:
+                cost = 3000;
+                break;
+            default:
+                cost = 0;
+                break;
+        }
+    }
     public int PlusScore()
     {
         switch(Tire)

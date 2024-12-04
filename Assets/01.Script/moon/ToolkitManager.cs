@@ -43,29 +43,31 @@ public class ToolkitManager : MonoBehaviour
 
     public void SetScore()
     {
-       scroe.text = "현재점수 : " + GameManager.Instance.Coin;
+       scroe.text = "현재점수 : " + GameManager.Instance.Score;
     }
 
     public void SetTooltip(string a , int p)
     {
-        if(p == 1)
+        switch (p)
         {
-            toolTip1.text = a;
-            toolTip1P.text = a;
+            case 0:
+                toolTip1.text = a;
+                toolTip1P.text = a;
+                break;
+            case 1:
+                toolTip2.text = a;
+                toolTip2P.text = a;
+                break;
+            case 2: 
+                toolTip3.text = a;
+                toolTip3P.text = a;
+                break;
+            default:
+                break;
+        }
            
-        }
-        else if(p == 2)
-        {
-            toolTip2.text = a;
-            toolTip2P.text = a;
-        }
-        else
-        {
-            toolTip3.text = a;
-
-
-            toolTip3P.text = a;
-        }
+       
+        
         
         
     }

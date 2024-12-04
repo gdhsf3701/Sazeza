@@ -86,7 +86,7 @@ public class Stage1 : MonoBehaviour
         int i = 0;
         foreach(var item in Ingredient)
         {
-            UIManager.Instance.texts[i].text = GameManager.Instance.IngredientSO[item].ToolTip;
+            ToolkitManager.Instance.SetTooltip(GameManager.Instance.IngredientSO[item].ToolTip, i);
             i++;
             
         }

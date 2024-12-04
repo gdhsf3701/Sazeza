@@ -16,3 +16,5 @@ MonoBehaviour:
   dirtyRate: 100
   ToolTip: "\uBD84\uD64D\uC0C9\uC778\uB370 \uB178\uB798\uB97C \uB4E4\uC73C\uBA74
     \uC7A0\uC774\uC640"
+  Tire: 2
+  cost: 4000

@@ -15,3 +15,5 @@ MonoBehaviour:
   sprite: {fileID: 0}
   dirtyRate: 100
   ToolTip: Close Your Laptop
+  Tire: 1
+  cost: 5000
