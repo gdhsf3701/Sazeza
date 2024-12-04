@@ -62,7 +62,7 @@ public class Stage1 : MonoBehaviour
 
         foreach (var ingredient in allIngredients)
         {
-            if (!Ingredient.Contains(ingredient))
+            if (!Ingredient.Contains(ingredient)&& GameManager.Instance.IngredientIsBuy[ingredient])
             {
                 validIngredients.Add(ingredient);
             }
@@ -88,7 +88,6 @@ public class Stage1 : MonoBehaviour
         {
             ToolkitManager.Instance.SetTooltip(GameManager.Instance.IngredientSO[item].ToolTip, i);
             i++;
-            
         }
     }
 }
