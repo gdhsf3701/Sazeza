@@ -11,6 +11,6 @@ public class FollowMousePos : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = main.WorldToScreenPoint(Input.mousePosition);
+        transform.position = (Vector2)main.ScreenToWorldPoint(Input.mousePosition);
     }
 }
