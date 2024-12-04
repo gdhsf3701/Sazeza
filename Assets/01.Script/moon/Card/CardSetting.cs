@@ -32,7 +32,10 @@ public class CardSetting : MonoBehaviour
     {
         foreach(IngredientTypeEnum ingredientType in Enum.GetValues(typeof(IngredientTypeEnum)))
         {
-            cards.Add(ingredientType);
+            if (GameManager.Instance.IngredientIsBuy[ingredientType])
+            {
+                cards.Add(ingredientType);
+            }
         }
 
     }
