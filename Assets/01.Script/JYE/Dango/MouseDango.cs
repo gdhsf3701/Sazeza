@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseDango : MonoBehaviour
 {
     private float RollSpeed = 300; //당고 돌아가는 속도
-    private float Speed = 5; //당고 따라가는 속도
+    private float Speed = 30; //당고 따라가는 속도
 
     private Vector3 mousePosition = new Vector3(0, -5, 0); //당고가 따라갈 마우스 위치
 
