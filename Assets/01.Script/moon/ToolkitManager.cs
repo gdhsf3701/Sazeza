@@ -32,9 +32,9 @@ public class ToolkitManager : MonoBehaviour
         ChangName.text = "당고 만들기 게임.exe : " + name;
     }
 
-    public void SetScore(int Score)
+    public void SetScore()
     {
-       scroe.text = "현재점수 : " + Score.ToString();
+       scroe.text = "현재점수 : " + GameManager.Instance.Coin;
     }
 
 

@@ -23,6 +23,7 @@ public class Stage1 : MonoBehaviour
     }
     private void Start()
     {
+        ToolkitManager.Instance.ChangeSceneName("À×");
         ToolTipSetting();
         GameManager.Instance.OnIngredientAdd += ScoreUP;
     }

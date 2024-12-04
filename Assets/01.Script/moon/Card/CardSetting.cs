@@ -17,36 +17,18 @@ public class CardSetting : MonoBehaviour
     List<IngredientTypeEnum> cards = new List<IngredientTypeEnum>();
     private Vector2 startVetor;
     private Vector2 nowVecor;
-    private void Awake()
-    {
-        Initialize();
-    }
-    private void Initialize()
-    {
-        startVetor = transform.position;
-        startVetor = new Vector2(startVetor.x + prefab.transform.localScale.x / 2, startVetor.y - prefab.transform.localScale.y / 2);
-        nowVecor = startVetor;
-        InitializeCards();
-    }
-    private void InitializeCards()
-    {
-        foreach(IngredientTypeEnum ingredientType in Enum.GetValues(typeof(IngredientTypeEnum)))
-        {
-            cards.Add(ingredientType);
-        }
-
-    }
     private void Start()
     {
+        Initialize();
         for (int x = 0; x < xCardMany; x++)
         {
-            for(int y = 0; y < yCardMany; y++)
+            for (int y = 0; y < yCardMany; y++)
             {
-                if(cards.Count > 0)
+                if (cards.Count > 0)
                 {
                     int rand = Random.Range(0, cards.Count);
-                    GameObject temp = Instantiate(prefab,nowVecor,Quaternion.identity,transform);
-                    if(temp.transform.TryGetComponent(out Card card) && cards.Count > 0)
+                    GameObject temp = Instantiate(prefab, nowVecor, Quaternion.identity, transform);
+                    if (temp.transform.TryGetComponent(out Card card) && cards.Count > 0)
                     {
                         card.myCard = cards[rand];
                         cards.RemoveAt(rand);
@@ -60,5 +42,23 @@ public class CardSetting : MonoBehaviour
             }
             nowVecor = new Vector2(startVetor.x, nowVecor.y - distance - prefab.transform.GetChild(0).localScale.y);
         }
+    }
+    private void Initialize()
+    {
+        startVetor = transform.position;
+        startVetor = new Vector2(startVetor.x + prefab.transform.localScale.x / 2, startVetor.y - prefab.transform.localScale.y / 2);
+        nowVecor = startVetor;
+        InitializeCards();
+    }
+    private void InitializeCards()
+    {
+        foreach(IngredientTypeEnum ingredientType in Enum.GetValues(typeof(IngredientTypeEnum)))
+        {
+            if (GameManager.Instance.IngredientIsBuy[ingredientType])
+            {
+                cards.Add(ingredientType);
+            }
+        }
+
     }
 }

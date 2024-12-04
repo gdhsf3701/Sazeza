@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     [field:SerializeField]public int Coin { get; private set; }
     [field:SerializeField]public List<IngredientTypeEnum> Ingredient { get; private set; }
     public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }
+    //stageIngredient
     #region StagesIngredient
     public Dictionary<IngredientTypeEnum, int> IngredientScore { get; private set; }
     public event Action<IngredientTypeEnum> OnIngredientAdd;
@@ -44,7 +45,8 @@ public class GameManager : MonoBehaviour
     public Dictionary<IngredientTypeEnum, bool> IngredientIsBuy { get; private set; }
     public IngredientTypeEnum nowIngredientType { get; set; }
     #endregion
-    #region FirstIngredientSetting
+    //Initializes
+    #region FirstSetting
     private void Awake()
     {
         if(Instance == null)
@@ -98,6 +100,7 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+    //StagesIngredientSetting
     #region StagesIngredientSetting
     public void AddIngredient(IngredientTypeEnum add)
     {

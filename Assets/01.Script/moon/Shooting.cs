@@ -69,9 +69,10 @@ public class Shooting : MonoBehaviour
         if(myChild.Count == 0)
         {
             NextScene();
+            return;
         }
         canGetReward = true;
-        int rand = Random.Range(0,myChild.Count-1);
+        int rand = Random.Range(0, myChild.Count);
         nowChild = myChild[rand];
         nowChild.gameObject.SetActive(true);
     }
