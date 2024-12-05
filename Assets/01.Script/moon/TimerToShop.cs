@@ -10,7 +10,7 @@ public class TimerToShop : MonoBehaviour
     {
         ToolkitManager.Instance.timer2(5);
         ToolkitManager.Instance.ChangeSceneName("5. 당고 판매 결산");
-        ToolkitManager.Instance.Paid();
+
         ToolkitManager.Instance.SetResult();
     }
     private void Update()

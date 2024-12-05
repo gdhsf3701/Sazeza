@@ -62,6 +62,7 @@ public class ToolkitManager : MonoBehaviour
         tooltipPaper.style.display = DisplayStyle.None;
         tooltipPaper.pickingMode = PickingMode.Ignore;
         chang.pickingMode = PickingMode.Ignore;
+        pade.pickingMode = PickingMode.Ignore;
 
     }
 
@@ -87,11 +88,13 @@ public class ToolkitManager : MonoBehaviour
     public void Paid()
     {
         pade.AddToClassList("See");
+        pade.pickingMode = PickingMode.Ignore;
     }
 
     public void Padii()
     {
         pade.RemoveFromClassList("See");
+        pade.pickingMode = PickingMode.Ignore;
     }
     
     
