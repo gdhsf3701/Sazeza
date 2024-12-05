@@ -146,9 +146,10 @@ public class GameManager : MonoBehaviour
         IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
         Score = 0;
     }
-    public void ScoreToCoin()
+    public int ScoreToCoin()
     {
         Coin += Score / 2;
+        return Score / 2;
     }
     public void CoinCange(int coinCangeRange)
     {
