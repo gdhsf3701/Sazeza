@@ -8,7 +8,7 @@ public class SetSauce : MonoBehaviour
     private TextMeshProUGUI sauceScore;
 
     private int min = 8;
-    private int max = 25;
+    private int max = 17;
 
     private void Awake()
     {
