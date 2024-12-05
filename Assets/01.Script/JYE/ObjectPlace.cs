@@ -41,6 +41,6 @@ public class ObjectPlace : MonoBehaviour
     private IEnumerator UpgradeSpeed()
     {
         yield return new WaitForSeconds(1.2f);
-        speed += 0.01f;
+        speed += 0.0025f;
     }
 }

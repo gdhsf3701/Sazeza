@@ -46,7 +46,7 @@ public class Shooting : MonoBehaviour
     {
         if(canGetReward)
         {
-            nowChild.parent = collision.transform;
+            nowChild.parent = collision.transform.parent;
             myChild.Remove(nowChild);
             nowChild = null;
             canGetReward = false;
