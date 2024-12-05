@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ObjectPlace : MonoBehaviour
 {
-    //ÁÂÇ¥ //ÀÛÀº º® -5, 0, 3
-    [SerializeField] private List<Vector3> position; //ÁÂÇ¥
+    //ï¿½ï¿½Ç¥ //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ -5, 0, 3
+    [SerializeField] private List<Vector3> position; //ï¿½ï¿½Ç¥
 
-    [SerializeField] private GameObject parent; //ºÎ¸ð
+    [SerializeField] private GameObject parent; //ï¿½Î¸ï¿½
     public GameObject Parent { get; set; }
 
-    private static float speed = 0.01f; //³»·Á°¡´Â ¼Óµµ
+    private static float speed = 0.01f; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½
 
     private void Awake()
     {
@@ -28,19 +28,24 @@ public class ObjectPlace : MonoBehaviour
         MoveDown();
     }
 
-    private void MoveDown() //¾Æ·¡·Î ³»·Á°¡±â
+    private void MoveDown() //ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         transform.position += Vector3.down * speed;
     }
 
-    private void StartPosition() //½ÃÀÛ À§Ä¡
+    private void StartPosition() //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
     {
         transform.position = position[Random.Range(0, position.Count)];
     }
 
-    private IEnumerator UpgradeSpeed()
+    //private IEnumerator UpgradeSpeed()
+    //{
+
+    //}
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        while (true)
+        if (collision.gameObject.TryGetComponent<Sauce>(out Sauce sauce)) //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
         {
             yield return new WaitForSeconds(1.2f);
             speed += 0.01f;
