@@ -31,8 +31,8 @@ public class CountTime : MonoBehaviour
     {
         perfect = CheckText();
         //다음씬으로
-        //SceneManager.LoadScene("Stage5");
-        Time.timeScale = 0;
+        SceneManager.LoadScene("Stage5");
+       
     }
 
     private bool CheckText() //완벽하게 점수 맞는지
