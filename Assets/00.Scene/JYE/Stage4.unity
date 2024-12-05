@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 98311785}
   - component: {fileID: 98311784}
   - component: {fileID: 98311783}
-  - component: {fileID: 98311782}
   m_Layer: 0
   m_Name: Dango (1)
   m_TagString: Player
@@ -161,18 +160,6 @@ Transform:
   - {fileID: 170767308}
   m_Father: {fileID: 1663140593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &98311782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98311780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f449470931a7e48ad0fb895b90a141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &98311783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +338,6 @@ GameObject:
   - component: {fileID: 164444309}
   - component: {fileID: 164444308}
   - component: {fileID: 164444307}
-  - component: {fileID: 164444306}
   m_Layer: 0
   m_Name: Dango (2)
   m_TagString: Player
@@ -375,18 +361,6 @@ Transform:
   - {fileID: 967669696}
   m_Father: {fileID: 1663140593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &164444306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164444304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f449470931a7e48ad0fb895b90a141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &164444307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,7 +623,6 @@ GameObject:
   - component: {fileID: 321386550}
   - component: {fileID: 321386551}
   - component: {fileID: 321386552}
-  - component: {fileID: 321386553}
   m_Layer: 0
   m_Name: Dango
   m_TagString: Player
@@ -837,18 +810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDango: 1
---- !u!114 &321386553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321386546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f449470931a7e48ad0fb895b90a141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &425787212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2206,7 @@ GameObject:
   - component: {fileID: 1663140593}
   - component: {fileID: 1663140594}
   - component: {fileID: 1663140596}
+  - component: {fileID: 1663140597}
   m_Layer: 0
   m_Name: Dango
   m_TagString: Untagged
@@ -2314,6 +2276,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1663140597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663140592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f449470931a7e48ad0fb895b90a141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite1: {fileID: 321386547}
+  _sprite2: {fileID: 98311787}
+  _sprite3: {fileID: 164444311}
 --- !u!1 &1695803924
 GameObject:
   m_ObjectHideFlags: 0

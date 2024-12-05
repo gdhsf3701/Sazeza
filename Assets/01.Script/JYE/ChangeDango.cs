@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ChangeDango : MonoBehaviour
 {
-    private SpriteRenderer _sprite;
+    [SerializeField] private SpriteRenderer _sprite1;
+    [SerializeField] private SpriteRenderer _sprite2;
+    [SerializeField] private SpriteRenderer _sprite3;
 
     private void Awake()
     {
-        _sprite = GetComponent<SpriteRenderer>();
         SpriteChange();
     }
     public void SpriteChange()
     {
-        _sprite.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.nowIngredientType].sprite;
+        _sprite1.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.Ingredient[0]].sprite;
+        _sprite2.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.Ingredient[1]].sprite;
+        _sprite3.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.Ingredient[2]].sprite;
     }
 }
