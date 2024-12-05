@@ -10,7 +10,7 @@ public class Stage3 : MonoBehaviour
     {
         shootingPos = shooting.transform.position;
         shooting.ResetPos += PosReset;
-        ToolkitManager.Instance.ChangeSceneName("¸Á");
+        ToolkitManager.Instance.ChangeSceneName("3. ´ç°í Àç·á ²¿Ä¡¿¡ ³¢¿ì±â");
     }
     private void Update()
     {

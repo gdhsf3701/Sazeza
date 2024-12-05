@@ -20,7 +20,7 @@ public class Stage1 : MonoBehaviour
         {
             Ingredient.Add(IngredentSetting());
         }
-        ToolkitManager.Instance.ChangeSceneName("잉");
+        ToolkitManager.Instance.ChangeSceneName("1. 당고 재료 선택하기");
         ToolTipSetting();
         GameManager.Instance.OnIngredientAdd += ScoreUP;
     }

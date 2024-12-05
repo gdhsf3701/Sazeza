@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
+        ToolkitManager.Instance.ChangeSceneName("4. 당고시럽 바르기");
         Timetime = _time;
     }
 

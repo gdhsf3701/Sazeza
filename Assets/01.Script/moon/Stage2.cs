@@ -13,7 +13,7 @@ public class Stage2 : MonoBehaviour
     private void Start()
     {
         Initialize();
-        ToolkitManager.Instance.ChangeSceneName("밍");
+        ToolkitManager.Instance.ChangeSceneName("2. 당고 재료 씻기");
     }
     private void Initialize()
     {

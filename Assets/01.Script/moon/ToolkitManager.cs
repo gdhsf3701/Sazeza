@@ -17,6 +17,7 @@ public class ToolkitManager : MonoBehaviour
     private Label toolTip2P;
     private Label toolTip3P;
     private VisualElement tooltipPaper;
+    private VisualElement chang;
 
 
     private void Awake()
@@ -34,8 +35,8 @@ public class ToolkitManager : MonoBehaviour
         var root = GetComponent<UIDocument>().rootVisualElement;
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
-        var chang = root.Q<VisualElement>("Chang");
-        chang.pickingMode = PickingMode.Ignore;
+      chang = root.Q<VisualElement>("Chang");
+        
         toolTip1 = root.Q<Label>("Tooltip1");
         toolTip2= root.Q<Label>("Tooltip2");
         toolTip3 = root.Q<Label>("Tooltip3");
@@ -44,20 +45,26 @@ public class ToolkitManager : MonoBehaviour
         toolTip3P = root.Q<Label>("Tooltip3p");
         tooltipPaper = root.Q<VisualElement>("TooltipPaper");
 
-        StartCoroutine(Paper());
+        StartCoroutine(Paper(3));
 
     }
-
-    IEnumerator Paper()
+    public void timer2(int a)
+    {
+        StartCoroutine(Paper(a));
+    }
+    public IEnumerator Paper(int a )
     {
         tooltipPaper.style.display = DisplayStyle.Flex;
         
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(a);
 
         tooltipPaper.style.display = DisplayStyle.None;
         tooltipPaper.pickingMode = PickingMode.Ignore;
+        chang.pickingMode = PickingMode.Ignore;
 
     }
+
+    
 
     public void ChangeSceneName(string name)
     {
