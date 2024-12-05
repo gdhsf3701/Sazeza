@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public event Action<IngredientTypeEnum> OnIngredientAdd;
     public Dictionary<IngredientTypeEnum, int> IngredientDirtyRate { get; private set; }
     public Dictionary<IngredientTypeEnum, bool> IngredientIsBuy { get; private set; }
-    public IngredientTypeEnum nowIngredientType { get; set; }
+    public IngredientTypeEnum NowIngredientType { get; set; }
     #endregion
     //Initializes
     #region FirstSetting

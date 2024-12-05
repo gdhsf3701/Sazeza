@@ -7,6 +7,7 @@ public class MouseClickCheck : MonoBehaviour
 {
     [SerializeField] Stage2 stage;
     [SerializeField] SpriteRenderer sprite;
+    [SerializeField] WaterShow waterShow;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -22,20 +23,33 @@ public class MouseClickCheck : MonoBehaviour
                     {
                         water.canWater = false;
                         SetDartyRate();
+                        waterShow.TimerZeroSet();
                     }
                 }
+            }
+            else
+            {
+                GameManager.Instance.IngredientDirtyRatePlus(GameManager.Instance.NowIngredientType, 20);
+                SetDarty();
             }
         }
     }
     private void SetDartyRate()
     {
         Color temp = sprite.color;
-        GameManager.Instance.IngredientDirtyRateMinus(GameManager.Instance.nowIngredientType, 20);
-        if (GameManager.Instance.IngredientDirtyRate[GameManager.Instance.nowIngredientType] <= 0)
+        GameManager.Instance.IngredientDirtyRateMinus(GameManager.Instance.NowIngredientType, 20);
+        if (GameManager.Instance.IngredientDirtyRate[GameManager.Instance.NowIngredientType] <= 0)
         {
             stage.NewIngredientType();
         }
-        temp.a = GameManager.Instance.IngredientDirtyRate[GameManager.Instance.nowIngredientType]/100f;
+        temp.a = GameManager.Instance.IngredientDirtyRate[GameManager.Instance.NowIngredientType]/100f;
+        sprite.color = temp;
+    }
+    private void SetDarty()
+    {
+        Color temp = sprite.color;
+        GameManager.Instance.IngredientDirtyRatePlus(GameManager.Instance.NowIngredientType, 20);
+        temp.a = GameManager.Instance.IngredientDirtyRate[GameManager.Instance.NowIngredientType] / 100f;
         sprite.color = temp;
     }
 }

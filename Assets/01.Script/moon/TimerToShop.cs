@@ -10,15 +10,14 @@ public class TimerToShop : MonoBehaviour
     {
         ToolkitManager.Instance.timer2(5);
         ToolkitManager.Instance.ChangeSceneName("5. 당고 판매 결산");
-
         ToolkitManager.Instance.SetResult();
+        GameManager.Instance.ResetIngredient();
     }
     private void Update()
     {
         _timer -= Time.deltaTime;
         if(_timer < 0)
         {
-            GameManager.Instance.ResetIngredient();
             ToolkitManager.Instance.Padii();
             SceneManager.LoadScene("Shop");
         }

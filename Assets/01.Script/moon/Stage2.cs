@@ -23,7 +23,7 @@ public class Stage2 : MonoBehaviour
             ingredientTypes.Add(type);
         }
         int rand = Random.Range(0, GameManager.Instance.Ingredient.Count);
-        GameManager.Instance.nowIngredientType = ingredientTypes[rand];
+        GameManager.Instance.NowIngredientType = ingredientTypes[rand];
         ingredientTypes.RemoveAt(rand);
         MouseSpriteChange();
     }
@@ -35,13 +35,13 @@ public class Stage2 : MonoBehaviour
             return;
         }
         int rand = Random.Range(0, ingredientTypes.Count);
-        GameManager.Instance.nowIngredientType = ingredientTypes[rand];
+        GameManager.Instance.NowIngredientType = ingredientTypes[rand];
         ingredientTypes.RemoveAt(rand);
         MouseSpriteChange();
     }
     public void MouseSpriteChange()
     {
-        mouseSprite.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.nowIngredientType].sprite;
+        mouseSprite.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.NowIngredientType].sprite;
     } 
     private void NextScene()
     {
