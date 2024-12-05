@@ -69,6 +69,13 @@ public class ToolkitManager : MonoBehaviour
        scroe.text = "현재점수 : " + GameManager.Instance.Score;
     }
 
+    public void SetResult()
+    {
+        toolTip1P.text = GameManager.Instance.Score.ToString();
+        toolTip2P.text = GameManager.Instance.ScoreToCoin().ToString();
+        toolTip3P.text = GameManager.Instance.Coin.ToString();
+    }
+
     public void SetTooltip(string a , int p)
     {
         switch (p)
