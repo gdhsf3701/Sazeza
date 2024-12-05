@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Score>k__BackingField: 0
-  <Coin>k__BackingField: 0
+  <Coin>k__BackingField: 20000
   <Ingredient>k__BackingField: 
 --- !u!4 &2111063825
 Transform:
@@ -1336,7 +1336,7 @@ SceneRoots:
   - {fileID: 2111063825}
   - {fileID: 1518359574}
   - {fileID: 1836190480}
-  - {fileID: 1111210267}
   - {fileID: 1859078458}
+  - {fileID: 1111210267}
   - {fileID: 865054915}
   - {fileID: 675923733}

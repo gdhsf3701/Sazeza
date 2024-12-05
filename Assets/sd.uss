@@ -1,0 +1,12 @@
+.Hide {
+    flex-grow: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 2s;
+}
+
+.See {
+    opacity: 0;
+}

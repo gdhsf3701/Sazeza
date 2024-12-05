@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Score += (int)(IngredientScore[Ingredient[i]] * (float)IngredientDirtyRate[Ingredient[i]] / 100f) ;
+                Score += (int)(IngredientScore[Ingredient[i]] * (float)(1f - (IngredientDirtyRate[Ingredient[i]]/100f) ));
             }
         }
     }

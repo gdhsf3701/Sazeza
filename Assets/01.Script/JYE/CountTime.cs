@@ -19,6 +19,7 @@ public class CountTime : MonoBehaviour
     private void Awake()
     {
         timeText = GetComponent<TextMeshProUGUI>();
+        ToolkitManager.Instance.Paid();
         timer.OnTimerEnd += NextScene;
     }
 
@@ -31,6 +32,7 @@ public class CountTime : MonoBehaviour
     {
         perfect = CheckText();
         //¥Ÿ¿Ωæ¿¿∏∑Œ
+        ToolkitManager.Instance.Padii();
         SceneManager.LoadScene("Stage5");
        
     }
