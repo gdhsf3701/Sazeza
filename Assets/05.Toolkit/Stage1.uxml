@@ -25,4 +25,5 @@
             <ui:Label tabindex="-1" text="이것은텍스트ㅡ테스트용?텍스트테스트?조난웃기다!1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Tooltip3p" style="white-space: normal; -unity-font: url(&quot;project://database/Assets/Font/KyoboHandwriting2019.ttf?fileID=12800000&amp;guid=3ea6c6b91b1e6374fb659fe50c15af6d&amp;type=3#KyoboHandwriting2019&quot;); -unity-font-definition: initial; font-size: 70px; -unity-text-align: upper-center;" />
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:VisualElement name="Pade" class="Hide" />
 </ui:UXML>

@@ -21,6 +21,7 @@ public class Stage1 : MonoBehaviour
             Ingredient.Add(IngredentSetting());
         }
         ToolkitManager.Instance.ChangeSceneName("1. 당고 재료 선택하기");
+        ToolkitManager.Instance.Paid();
         ToolTipSetting();
         GameManager.Instance.OnIngredientAdd += ScoreUP;
     }
@@ -37,6 +38,7 @@ public class Stage1 : MonoBehaviour
         GameManager.Instance.IngredientDirtyRate.Add(add, 100);
         if (nowIngredientCount >= 3)
         {
+            ToolkitManager.Instance.Padii();
             SceneManager.LoadScene("Stage2");
         }
     }

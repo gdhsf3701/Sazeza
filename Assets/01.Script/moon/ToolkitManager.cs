@@ -18,6 +18,7 @@ public class ToolkitManager : MonoBehaviour
     private Label toolTip3P;
     private VisualElement tooltipPaper;
     private VisualElement chang;
+    private VisualElement pade; 
 
 
     private void Awake()
@@ -36,7 +37,7 @@ public class ToolkitManager : MonoBehaviour
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
       chang = root.Q<VisualElement>("Chang");
-        
+        pade = root.Q<VisualElement>("Pade");
         toolTip1 = root.Q<Label>("Tooltip1");
         toolTip2= root.Q<Label>("Tooltip2");
         toolTip3 = root.Q<Label>("Tooltip3");
@@ -83,6 +84,17 @@ public class ToolkitManager : MonoBehaviour
         toolTip3P.text = GameManager.Instance.Coin.ToString();
     }
 
+    public void Paid()
+    {
+        pade.AddToClassList("See");
+    }
+
+    public void Padii()
+    {
+        pade.RemoveFromClassList("See");
+    }
+    
+    
     public void SetTooltip(string a , int p)
     {
         switch (p)
