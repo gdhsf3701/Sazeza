@@ -2291,6 +2291,9 @@ MonoBehaviour:
   _sprite1: {fileID: 321386547}
   _sprite2: {fileID: 98311787}
   _sprite3: {fileID: 164444311}
+  _sprite11: {fileID: 321386549}
+  _sprite22: {fileID: 98311786}
+  _sprite33: {fileID: 164444310}
 --- !u!1 &1695803924
 GameObject:
   m_ObjectHideFlags: 0
