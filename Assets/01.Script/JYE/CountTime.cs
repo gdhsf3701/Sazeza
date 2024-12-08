@@ -10,8 +10,6 @@ public class CountTime : MonoBehaviour
 {
     [SerializeField] private Timer timer;
 
-    [SerializeField] bool perfect;
-
     private TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private TextMeshProUGUI DangoText;
@@ -30,18 +28,12 @@ public class CountTime : MonoBehaviour
 
     private void NextScene()
     {
-        perfect = CheckText();
         //다음씬으로
+        GameManager.Instance.Stage4ScoreSet(int.Parse(DangoText.text),int.Parse(text.text)); //점수 계산
         ToolkitManager.Instance.Padii();
         SceneManager.LoadScene("Stage5");
        
     }
-
-    private bool CheckText() //완벽하게 점수 맞는지
-    {
-        return int.Parse(text.text) == int.Parse(DangoText.text);
-    }
-
     private void TimeText() //시간 텍스트
     {
         timeText.text = ((int)timer.Timetime).ToString();
