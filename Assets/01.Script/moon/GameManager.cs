@@ -138,6 +138,12 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    public void Stage4ScoreSet(int nowNum, int targetNum)
+    {
+        int ScoreDistance = Mathf.Abs(nowNum - targetNum);
+        int ScorePlus = 1000 - ScoreDistance * 100;
+        Score += ScorePlus;
+    }
     #endregion
     public void ResetIngredient()
     {
