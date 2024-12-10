@@ -76,5 +76,16 @@ public class SoundManager : MonoSingleton<SoundManager>
 public enum Sound
 {
     ButtonClick,
-   
+    BellRing,
+    BuyFail,
+    BuySuccess,
+    Card,
+    Catch,
+    Paper,
+    Receipt,
+    Shop,
+    Stage,
+    Tada,
+    Throw,
+    WaterClean
 }
