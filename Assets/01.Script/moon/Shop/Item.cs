@@ -21,7 +21,12 @@ public class Item : MonoBehaviour
         {
             GameManager.Instance.IngredientIsBuy[MyIngredientType] = true;
             GameManager.Instance.CoinCange(-GameManager.Instance.IngredientSO[MyIngredientType].cost);
+            SoundManager.Instance.PlaySound(Sound.BuySuccess);
             gameObject.SetActive(false);
+        }
+        else
+        {
+            SoundManager.Instance.PlaySound(Sound.BuyFail);
         }
     }
 }

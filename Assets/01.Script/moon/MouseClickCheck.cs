@@ -22,6 +22,7 @@ public class MouseClickCheck : MonoBehaviour
                     if(water.canWater)
                     {
                         water.canWater = false;
+                        SoundManager.Instance.PlaySound(Sound.WaterClean);
                         SetDartyRate();
                         waterShow.TimerZeroSet();
                     }

@@ -24,6 +24,8 @@ public class Stage1 : MonoBehaviour
         ToolkitManager.Instance.Paid();
         ToolTipSetting();
         GameManager.Instance.OnIngredientAdd += ScoreUP;
+        SoundManager.Instance.PlaySound(Sound.BellRing);
+        SoundManager.Instance.PlaySound(Sound.Paper);
     }
     private void ScoreUP(IngredientTypeEnum add)
     {
