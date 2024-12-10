@@ -46,6 +46,7 @@ public class Shooting : MonoBehaviour
     {
         if(canGetReward)
         {
+            SoundManager.Instance.PlaySound(Sound.Catch);
             nowChild.parent = collision.transform.parent;
             myChild.Remove(nowChild);
             nowChild = null;

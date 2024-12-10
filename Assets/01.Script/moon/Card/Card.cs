@@ -18,6 +18,7 @@ public class Card : MonoBehaviour
     private void OnButtonCliced()
     {
         myButton.onClick.RemoveAllListeners();
+        SoundManager.Instance.PlaySound(Sound.Card);
         GameManager.Instance.AddIngredient(myCard);
         myRenderer.enabled = false;
         myButton.enabled = false;

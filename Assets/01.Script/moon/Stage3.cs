@@ -18,6 +18,7 @@ public class Stage3 : MonoBehaviour
         if (Input.GetMouseButtonDown(0)&&!shooting.IsShooting)
         {
             shooting.Shoot(Vector3.up);
+            SoundManager.Instance.PlaySound(Sound.Throw);
             shooting.IsShooting = true;
         }
     }
