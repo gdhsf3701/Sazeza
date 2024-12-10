@@ -65,6 +65,7 @@ public class SoundManager : MonoSingleton<SoundManager>
             Debug.LogWarning("Sound not found: " + sound);
         }
     }
+   
 
     public void ResetSettings()
     {
