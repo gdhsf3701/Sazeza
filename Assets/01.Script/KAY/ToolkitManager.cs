@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityEngine.XR;
 
@@ -18,7 +19,9 @@ public class ToolkitManager : MonoBehaviour
     private Label toolTip3P;
     private VisualElement tooltipPaper;
     private VisualElement chang;
-    private VisualElement pade; 
+    private VisualElement pade;
+    private Button gotoShop;
+
 
 
     private void Awake()
@@ -30,6 +33,15 @@ public class ToolkitManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+    }
+    public void opem()
+    {
+        StartCoroutine(Opne());
+    }
+    IEnumerator Opne()
+    {
+        yield return new WaitForSeconds(4f);
+        gotoShop.style.display = DisplayStyle.Flex;
     }
     private void Start()
     {
@@ -45,9 +57,13 @@ public class ToolkitManager : MonoBehaviour
         toolTip2P = root.Q<Label>("Tooltip2p");
         toolTip3P = root.Q<Label>("Tooltip3p");
         tooltipPaper = root.Q<VisualElement>("TooltipPaper");
+        gotoShop = root.Q<Button>("BackStart");
 
+        gotoShop.RegisterCallback<ClickEvent>(BackStage1);
+        
+        gotoShop.style.display = DisplayStyle.None;
         StartCoroutine(Paper(3));
-
+       
     }
     public void timer2(int a)
     {
@@ -95,6 +111,10 @@ public class ToolkitManager : MonoBehaviour
     {
         pade.RemoveFromClassList("See");
         pade.pickingMode = PickingMode.Ignore;
+    }
+    public void BackStage1(ClickEvent evt)
+    {
+        SceneManager.LoadScene("Stage1");
     }
     
     
