@@ -20,8 +20,10 @@ public class TimerToShop : MonoBehaviour
         _timer -= Time.deltaTime;
         if(_timer < 0)
         {
-            ToolkitManager.Instance.Padii();
+           
             SceneManager.LoadScene("Shop");
+            ToolkitManager.Instance.Padii();
+            ToolkitManager.Instance.opem();
         }
     }
 }

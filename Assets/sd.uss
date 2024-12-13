@@ -10,3 +10,39 @@
 .See {
     opacity: 0;
 }
+
+.button {
+    position: absolute;
+    top: 838px;
+    left: 937px;
+    width: 366px;
+    height: 118px;
+    -unity-font: url("project://database/Assets/Font/KyoboHandwriting2019.ttf?fileID=12800000&guid=3ea6c6b91b1e6374fb659fe50c15af6d&type=3#KyoboHandwriting2019");
+    -unity-font-definition: initial;
+    font-size: 75px;
+    background-color: rgb(255, 240, 201);
+    border-left-color: rgb(255, 117, 0);
+    border-right-color: rgb(255, 117, 0);
+    border-top-color: rgb(255, 117, 0);
+    border-bottom-color: rgb(255, 117, 0);
+    border-top-width: 16px;
+    border-right-width: 16px;
+    border-bottom-width: 16px;
+    border-left-width: 16px;
+    border-top-left-radius: 39px;
+    border-top-right-radius: 39px;
+    border-bottom-right-radius: 39px;
+    border-bottom-left-radius: 39px;
+    color: rgb(255, 117, 0);
+    transition-duration: 1s;
+}
+
+.nigger {
+    color: rgb(184, 117, 60);
+    background-color: rgb(200, 185, 144);
+    border-left-color: rgb(183, 103, 36);
+    border-right-color: rgb(183, 103, 36);
+    border-top-color: rgb(183, 103, 36);
+    border-bottom-color: rgb(183, 103, 36);
+    transition-duration: 1s;
+}
