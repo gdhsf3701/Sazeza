@@ -32,6 +32,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     {
         // 각 사운드에 맞는 오디오 클립을 미리 로드합니다.
         soundDictionary[Sound.ButtonClick] = Resources.Load<AudioClip>("Sounds/ButtonClick");
+        soundDictionary[Sound.BellRing] = Resources.Load<AudioClip>("Sounds/BellRing");
      
     }
 
