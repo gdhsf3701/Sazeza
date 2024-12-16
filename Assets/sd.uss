@@ -36,13 +36,3 @@
     color: rgb(255, 117, 0);
     transition-duration: 1s;
 }
-
-.nigger {
-    color: rgb(184, 117, 60);
-    background-color: rgb(200, 185, 144);
-    border-left-color: rgb(183, 103, 36);
-    border-right-color: rgb(183, 103, 36);
-    border-top-color: rgb(183, 103, 36);
-    border-bottom-color: rgb(183, 103, 36);
-    transition-duration: 1s;
-}
