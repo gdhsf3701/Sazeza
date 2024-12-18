@@ -115,6 +115,7 @@ public class ToolkitManager : MonoBehaviour
     public void BackStage1(ClickEvent evt)
     {
         SceneManager.LoadScene("Stage1");
+        gotoShop.style.display = DisplayStyle.None;
     }
     
     

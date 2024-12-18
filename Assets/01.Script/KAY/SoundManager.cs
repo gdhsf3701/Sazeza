@@ -33,7 +33,21 @@ public class SoundManager : MonoSingleton<SoundManager>
         // 각 사운드에 맞는 오디오 클립을 미리 로드합니다.
         soundDictionary[Sound.ButtonClick] = Resources.Load<AudioClip>("Sounds/ButtonClick");
         soundDictionary[Sound.BellRing] = Resources.Load<AudioClip>("Sounds/BellRing");
-     
+        soundDictionary[Sound.BuyFail] = Resources.Load<AudioClip>("Sounds/BuyFail");
+        soundDictionary[Sound.BuySuccess] = Resources.Load<AudioClip>("Sounds/BuySuccess");
+        soundDictionary[Sound.Card] = Resources.Load<AudioClip>("Sounds/Card");
+        soundDictionary[Sound.Catch] = Resources.Load<AudioClip>("Sounds/Catch");
+        soundDictionary[Sound.Paper] = Resources.Load<AudioClip>("Sounds/Paper");
+        soundDictionary[Sound.Receipt] = Resources.Load<AudioClip>("Sounds/Receipt");
+        soundDictionary[Sound.Shop] = Resources.Load<AudioClip>("Sounds/Shop");
+        soundDictionary[Sound.Stage] = Resources.Load<AudioClip>("Sounds/Stage");
+        soundDictionary[Sound.WaterClean] = Resources.Load<AudioClip>("Sounds/WaterClean");
+        soundDictionary[Sound.Throw] = Resources.Load<AudioClip>("Sounds/Throw");
+        soundDictionary[Sound.Tada] = Resources.Load<AudioClip>("Sounds/Tada");
+
+
+
+
     }
 
     public void SetVolume(float newVolume)

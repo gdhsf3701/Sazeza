@@ -22,8 +22,7 @@ public class TimerToShop : MonoBehaviour
         {
            
             SceneManager.LoadScene("Shop");
-            ToolkitManager.Instance.Padii();
-            ToolkitManager.Instance.opem();
+            ToolkitManager.Instance.ChangeSceneName("06. 상점에서 쇼핑하기");   
         }
     }
 }
