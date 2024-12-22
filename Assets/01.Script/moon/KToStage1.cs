@@ -9,7 +9,7 @@ public class KToStage1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            SceneManager.LoadScene("Stage1");
+            SceneManager.LoadScene("Stage");
         }
     }
 }

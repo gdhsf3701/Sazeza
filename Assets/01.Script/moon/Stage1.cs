@@ -37,11 +37,11 @@ public class Stage1 : MonoBehaviour
         {
             GameManager.Instance.IngredientScore.Add(add, 500 - (GameManager.Instance.IngredientSO[add].PlusScore()/2));
         }
-        GameManager.Instance.IngredientDirtyRate.Add(add, 100);
+        GameManager.Instance.IngredientDirtyRate.Add(add, 0);
         if (nowIngredientCount >= 3)
         {
             ToolkitManager.Instance.Padii();
-            SceneManager.LoadScene("Stage2");
+            SceneManager.LoadScene("Stage");
         }
     }
     private void Update()
