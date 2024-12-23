@@ -30,7 +30,7 @@ public class WaterShow : MonoBehaviour
         startVetor = transform.position;
         startVetor = new Vector2(startVetor.x + prefab[0].transform.localScale.x / 2, startVetor.y - prefab[0].transform.localScale.y / 2);
         nowVecor = startVetor;
-        timer = Random.Range(0, 3) <= 1 ? Random.Range(0.05f, 0.2f) : Random.Range(0.5f, 1.5f);
+        timer = 1.5f; //Random.Range(0, 3) <= 1 ? Random.Range(0.05f, 0.2f) : Random.Range(0.5f, 1.5f);
     }
     private void Start()
     {
@@ -59,7 +59,7 @@ public class WaterShow : MonoBehaviour
          timer -= Time.deltaTime;
         if(timer < 0)
         {
-            timer = Random.Range(0, 3) <= 1 ? Random.Range(0.05f, 0.2f) : Random.Range(0.5f, 1.5f);
+            timer = 1.5f;//Random.Range(0, 3) <= 1 ? Random.Range(0.05f, 0.2f) : Random.Range(0.5f, 1.5f);
             WaterReset();
         }
     }

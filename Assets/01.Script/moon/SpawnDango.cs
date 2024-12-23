@@ -31,18 +31,18 @@ public class SpawnDango : MonoBehaviour
     private void InitializeDango()
     {
         _timer = _Timer;
-        foreach(IngredientTypeEnum item in (IngredientTypeEnum[])Enum.GetValues(typeof(IngredientTypeEnum)))
+        foreach(IngredientTypeEnum item in GameManager.Instance.Ingredient)
         {
             Ingredient.Add(item);
-            print(item.ToString());
         }
         for (int i = 0; i < Enum.GetValues(typeof(IngredientTypeEnum)).Length; i++)
         {
             GameObject temp = Instantiate(dango);
+            int intTemp = Random.Range(0, 3);
             dangos.Enqueue(temp);
-            temp.GetComponent<MyIngredientType>().myEnum = Ingredient[i];
-            temp.GetComponent<MyIngredientType>().mySprite.sprite = GameManager.Instance.IngredientSO[Ingredient[i]].sprite;
-            temp.GetComponent<SpriteMask>().sprite = GameManager.Instance.IngredientSO[Ingredient[i]].sprite;
+            temp.GetComponent<MyIngredientType>().myEnum = Ingredient[intTemp];
+            temp.GetComponent<MyIngredientType>().mySprite.sprite = GameManager.Instance.IngredientSO[Ingredient[intTemp]].sprite;
+            temp.GetComponent<SpriteMask>().sprite = GameManager.Instance.IngredientSO[Ingredient[intTemp]].sprite;
             temp.SetActive(false);
         }
     }
@@ -53,11 +53,26 @@ public class SpawnDango : MonoBehaviour
     }
     private void TryDequeue()
     {
-        GameObject dango = dangos.Dequeue();
-        dango.transform.position = new Vector3(Random.Range(StartPos.position.x, EndPos.position.x), StartPos.position.y);
-        dango.SetActive(true);
+        float gravityRand = Random.Range(0.5f, 3.1f);
+        GameObject dango;
+        if (dangos != null)
+        {
+            dango = dangos.Dequeue();
+            dango.transform.position = new Vector3(Random.Range(StartPos.position.x, EndPos.position.x), StartPos.position.y);
+            dango.SetActive(true);
+        }
+        else
+        {
+            dango = Instantiate(this.dango);
+            int intTemp = Random.Range(0, 3);
+            dango.GetComponent<MyIngredientType>().myEnum = Ingredient[intTemp];
+            dango.GetComponent<MyIngredientType>().mySprite.sprite = GameManager.Instance.IngredientSO[Ingredient[intTemp]].sprite;
+            dango.GetComponent<SpriteMask>().sprite = GameManager.Instance.IngredientSO[Ingredient[intTemp]].sprite;
+            dango.transform.position = new Vector3(Random.Range(StartPos.position.x, EndPos.position.x), StartPos.position.y);
+            dango.transform.GetChild(0).gameObject.SetActive(false);
+        }
         float random = Random.Range(0.0f, 100.1f);
-
+        dango.GetComponent<Rigidbody2D>().gravityScale = gravityRand;    
         if (random < 20f)
         {
             dango.transform.GetChild(0).gameObject.SetActive(true);

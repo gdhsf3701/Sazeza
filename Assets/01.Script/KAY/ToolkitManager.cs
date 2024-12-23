@@ -96,9 +96,9 @@ public class ToolkitManager : MonoBehaviour
 
     public void SetResult()
     {
-        toolTip1P.text = GameManager.Instance.Score.ToString();
-        toolTip2P.text = GameManager.Instance.ScoreToCoin().ToString();
-        toolTip3P.text = GameManager.Instance.Coin.ToString();
+        toolTip1P.text = "받은 점수 : "+GameManager.Instance.Score.ToString();
+        toolTip2P.text = "받은 코인 : " +GameManager.Instance.ScoreToCoin().ToString();
+        toolTip3P.text = "최종 보유 코인 : "+ GameManager.Instance.Coin.ToString();
     }
 
     public void Paid()
