@@ -31,11 +31,11 @@ public class Stage1 : MonoBehaviour
     {
         if (Ingredient.Contains(add))
         {
-            GameManager.Instance.IngredientScore.Add(add,500 + GameManager.Instance.IngredientSO[add].PlusScore());
+            GameManager.Instance.PlusScore(500 + GameManager.Instance.IngredientSO[add].PlusScore());
         }
         else
         {
-            GameManager.Instance.IngredientScore.Add(add, 500 - (GameManager.Instance.IngredientSO[add].PlusScore()/2));
+            GameManager.Instance.PlusScore(500 - (GameManager.Instance.IngredientSO[add].PlusScore()/2));
         }
         GameManager.Instance.IngredientDirtyRate.Add(add, 0);
         if (nowIngredientCount >= 3)
