@@ -42,10 +42,12 @@ public class Stage2 : MonoBehaviour
     public void MouseSpriteChange()
     {
         mouseSprite.sprite = GameManager.Instance.IngredientSO[GameManager.Instance.NowIngredientType].sprite;
+        mouseSprite.GetComponent<SpriteMask>().sprite = mouseSprite.sprite;
     } 
     private void NextScene()
-    {
-        SceneManager.LoadScene("Stage3");
+    { 
+        GameManager.Instance.DirtyRateToScore();
+        SceneManager.LoadScene("Stage");
          ToolkitManager.Instance.Padii();
     }
     private void Update()

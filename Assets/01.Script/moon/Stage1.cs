@@ -31,17 +31,17 @@ public class Stage1 : MonoBehaviour
     {
         if (Ingredient.Contains(add))
         {
-            GameManager.Instance.PlusScore(500 + GameManager.Instance.IngredientSO[add].PlusScore());
+            GameManager.Instance.IngredientScore.Add(add,500 + GameManager.Instance.IngredientSO[add].PlusScore());
         }
         else
         {
-            GameManager.Instance.PlusScore(500 - (GameManager.Instance.IngredientSO[add].PlusScore()/2));
+            GameManager.Instance.IngredientScore.Add(add, 500 - (GameManager.Instance.IngredientSO[add].PlusScore()/2));
         }
-        GameManager.Instance.IngredientDirtyRate.Add(add, 0);
+        GameManager.Instance.IngredientDirtyRate.Add(add, 100);
         if (nowIngredientCount >= 3)
         {
             ToolkitManager.Instance.Padii();
-            SceneManager.LoadScene("Stage");
+            SceneManager.LoadScene("Stage2");
         }
     }
     private void Update()
