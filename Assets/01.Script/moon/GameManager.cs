@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour
         Score += ScorePlus;
         if (isSpecial)
         {
-            Score = (int)(Score * 1.5f);
+            Score = (int)(Score * 1.1f);
         }
     }
     #endregion
@@ -163,6 +163,13 @@ public class GameManager : MonoBehaviour
         IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
         Score = 0;
         SpecialSonNum();
+    }
+    public void VIPCheck()
+    {
+        if (isSpecial)
+        {
+            Score = (int)(Score * 1.1f);
+        }
     }
     public int ScoreToCoin()
     {
@@ -177,9 +184,10 @@ public class GameManager : MonoBehaviour
     {
         float random = Random.Range(0.0f, 100.1f);
 
-        if (random < 3)
+        if (random <= 3)
         {
             isSpecial = true;
+            print("VIP");
         }
         else
         {

@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     public IngredientTypeEnum MyIngredientType;
-    private TextMeshPro text;
-    private Image myRenderer;
-    private Button button;
+    [SerializeField]private TextMeshProUGUI text;
+    [SerializeField]private Image myRenderer;
+    [SerializeField]private Button button;
     public void Initialize()
     {
         myRenderer = GetComponentInChildren<Image>();
-        text = GetComponentInChildren<TextMeshPro>();
-        button = GetComponent<Button>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
+        button = GetComponentInChildren<Button>();
         text.text = $"Coin:{GameManager.Instance.IngredientSO[MyIngredientType].cost}";
         myRenderer.sprite = GameManager.Instance.IngredientSO[MyIngredientType].sprite;
         button.onClick.AddListener(Buy);
