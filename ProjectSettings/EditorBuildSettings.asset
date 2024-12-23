@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.Scene/moon/Shop.unity
     guid: f664e64ece0f6a24b8a68ec0573cd320
+  - enabled: 1
+    path: Assets/00.Scene/moon/Stage.unity
+    guid: f8fc4a0ae1be39e40b2a01afd33397f4
+  - enabled: 1
+    path: Assets/00.Scene/moon/sss.unity
+    guid: 2865b4b9996bee34189296a072dc1e0a
   m_configObjects: {}

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum IngredientTypeEnum
 {
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     [field:SerializeField]public int Coin { get; private set; }
     [field:SerializeField]public List<IngredientTypeEnum> Ingredient { get; private set; }
     public Dictionary<IngredientTypeEnum, IngredientTypeSO> IngredientSO { get; private set; }
+    private bool isSpecial = false;
     //stageIngredient
     #region StagesIngredient
     public Dictionary<IngredientTypeEnum, int> IngredientScore { get; private set; }
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
         IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
         IngredientIsBuy = new Dictionary<IngredientTypeEnum, bool>();
         DictionaryInitialize();
+        SpecialSonNum();
     }
     private void DictionaryInitialize()
     {
@@ -108,6 +111,10 @@ public class GameManager : MonoBehaviour
         Ingredient.Add(add);
         OnIngredientAdd?.Invoke(add);
     }
+    public void PlusScore(int score)
+    {
+        Score += score;
+    }
     public void IngredientDirtyRateMinus(IngredientTypeEnum ingredientType , int rate)
     {
         IngredientDirtyRate[ingredientType] -= rate;
@@ -143,6 +150,10 @@ public class GameManager : MonoBehaviour
         int ScoreDistance = Mathf.Abs(nowNum - targetNum);
         int ScorePlus = 1000 - ScoreDistance * 100;
         Score += ScorePlus;
+        if (isSpecial)
+        {
+            Score = (int)(Score * 1.5f);
+        }
     }
     #endregion
     public void ResetIngredient()
@@ -151,6 +162,7 @@ public class GameManager : MonoBehaviour
         IngredientScore = new Dictionary<IngredientTypeEnum, int>();
         IngredientDirtyRate = new Dictionary<IngredientTypeEnum, int>();
         Score = 0;
+        SpecialSonNum();
     }
     public int ScoreToCoin()
     {
@@ -160,6 +172,20 @@ public class GameManager : MonoBehaviour
     public void CoinCange(int coinCangeRange)
     {
         Coin += coinCangeRange;
+    }
+    private void SpecialSonNum()
+    {
+        float random = Random.Range(0.0f, 100.1f);
+
+        if (random < 3)
+        {
+            isSpecial = true;
+        }
+        else
+        {
+            isSpecial = false;
+        }
+
     }
 }
     
