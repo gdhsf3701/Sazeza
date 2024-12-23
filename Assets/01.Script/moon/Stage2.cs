@@ -17,7 +17,6 @@ public class Stage2 : MonoBehaviour
     }
     private void Initialize()
     {
-        ToolkitManager.Instance.Paid();
         foreach(var type in GameManager.Instance.Ingredient)
         {
             ingredientTypes.Add(type);
@@ -48,7 +47,7 @@ public class Stage2 : MonoBehaviour
     { 
         GameManager.Instance.DirtyRateToScore();
         SceneManager.LoadScene("Stage");
-         ToolkitManager.Instance.Padii();
+       
     }
     private void Update()
     {
