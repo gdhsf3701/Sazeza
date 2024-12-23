@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!114 &733471428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!1001 &759051474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!114 &759051485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!114 &759051487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!114 &942583230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!114 &1008669613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!114 &2095602677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a85320d680e23794cb1524b5fd727c25, type: 3}
 --- !u!1 &2096886442
 GameObject:
   m_ObjectHideFlags: 0

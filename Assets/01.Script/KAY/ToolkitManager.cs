@@ -96,6 +96,7 @@ public class ToolkitManager : MonoBehaviour
 
     public void SetResult()
     {
+        GameManager.Instance.VIPCheck();
         toolTip1P.text = "받은 점수 : "+GameManager.Instance.Score.ToString();
         toolTip2P.text = "받은 코인 : " +GameManager.Instance.ScoreToCoin().ToString();
         toolTip3P.text = "최종 보유 코인 : "+ GameManager.Instance.Coin.ToString();
