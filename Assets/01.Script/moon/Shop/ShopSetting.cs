@@ -37,7 +37,7 @@ public class ShopSetting : MonoBehaviour
                 BuyThing.Add(ingredientType);
             }
         }
-
+        print($"awake:{BuyThing.Count}");
     }
     private void Start()
     {
@@ -64,11 +64,12 @@ public class ShopSetting : MonoBehaviour
         //    }
         //    nowVecor = new Vector2(startVetor.x, nowVecor.y - distance - prefab.transform.localScale.y);
         //}
-        for(int i = 0; i < BuyThing.Count; i++)
+        int tempInt = BuyThing.Count;
+        for (int i = 0; i < tempInt; i++)
         {
             int rand = Random.Range(0, BuyThing.Count);
             GameObject temp = Instantiate(prefab , Parent);
-            if (temp.transform.GetChild(0).TryGetComponent(out Item item) && BuyThing.Count > 0)
+            if (temp.transform.TryGetComponent(out Item item) && BuyThing.Count > 0)
             {
                 item.MyIngredientType = BuyThing[rand];
                 item.Initialize();
