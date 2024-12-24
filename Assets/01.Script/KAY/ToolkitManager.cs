@@ -43,6 +43,8 @@ public class ToolkitManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         gotoShop.style.display = DisplayStyle.Flex;
     }
+
+    
     private void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
@@ -62,7 +64,7 @@ public class ToolkitManager : MonoBehaviour
         gotoShop.RegisterCallback<ClickEvent>(BackStage1);
         
         gotoShop.style.display = DisplayStyle.None;
-        StartCoroutine(Paper(3));
+       
        
     }
     public void timer2(int a)
@@ -102,16 +104,12 @@ public class ToolkitManager : MonoBehaviour
         toolTip3P.text = "최종 보유 코인 : "+ GameManager.Instance.Coin.ToString();
     }
 
-    public void Paid()
+    public void GoStage1()
     {
-     //   pade.AddToClassList("See");
-    //    pade.pickingMode = PickingMode.Ignore;
-    }
+        SceneManager.LoadScene("Stage1");
+        ChangeSceneName("1. 당고 재료 선택하기");
+        StartCoroutine(Paper(3));
 
-    public void Padii()
-    {
-       // pade.RemoveFromClassList("See");
-    //    pade.pickingMode = PickingMode.Ignore;
     }
     public void BackStage1(ClickEvent evt)
     {

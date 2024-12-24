@@ -17,7 +17,7 @@ public class CountTime : MonoBehaviour
     private void Awake()
     {
         timeText = GetComponent<TextMeshProUGUI>();
-        ToolkitManager.Instance.Paid();
+     
         timer.OnTimerEnd += NextScene;
     }
 
@@ -30,7 +30,7 @@ public class CountTime : MonoBehaviour
     {
         //다음씬으로
         GameManager.Instance.Stage4ScoreSet(int.Parse(DangoText.text),int.Parse(text.text)); //점수 계산
-        ToolkitManager.Instance.Padii();
+      
         SceneManager.LoadScene("Stage5");
        
     }

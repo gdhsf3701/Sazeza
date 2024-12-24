@@ -7,6 +7,6 @@ public class GoToStage1 : MonoBehaviour
 {
     public void Scene1()
     {
-        SceneManager.LoadScene("Stage1");
+        ToolkitManager.Instance.GoStage1();
     }
 }
