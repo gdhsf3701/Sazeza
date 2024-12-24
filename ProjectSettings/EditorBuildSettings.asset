@@ -29,10 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.Scene/moon/sss.unity
     guid: 2865b4b9996bee34189296a072dc1e0a
-  - enabled: 1
-    path: Assets/00.Scene/KAY/MySweetHome.unity
-    guid: 6facff092b74e554b8137d1d6738abc8
-  - enabled: 1
-    path: Assets/00.Scene/JYE/Start.unity
-    guid: 67148b16a92013345aecdb5f8246155b
   m_configObjects: {}
