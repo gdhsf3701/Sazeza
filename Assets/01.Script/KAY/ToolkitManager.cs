@@ -19,9 +19,8 @@ public class ToolkitManager : MonoBehaviour
     private Label toolTip3P;
     private VisualElement tooltipPaper;
     private VisualElement chang;
-    private VisualElement pade;
     private Button gotoShop;
-    VisualElement root;
+
 
 
 
@@ -33,7 +32,6 @@ public class ToolkitManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        DontDestroyOnLoad(gameObject);
     }
     public void opem()
     {
@@ -47,11 +45,10 @@ public class ToolkitManager : MonoBehaviour
     public void start2()
     {
 
-        root = GetComponent<UIDocument>().rootVisualElement;
+        var  root = GetComponent<UIDocument>().rootVisualElement;
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
         chang = root.Q<VisualElement>("Chang");
-        pade = root.Q<VisualElement>("Pade");
         toolTip1 = root.Q<Label>("Tooltip1");
         toolTip2 = root.Q<Label>("Tooltip2");
         toolTip3 = root.Q<Label>("Tooltip3");
