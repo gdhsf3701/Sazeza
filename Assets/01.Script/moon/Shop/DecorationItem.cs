@@ -6,10 +6,15 @@ using UnityEngine.UI;
 
 public class DecorationItem : MonoBehaviour
 {
-    private Image myRenderer;
     [SerializeField] Sprite mySprite;
     [SerializeField] int myRenSprite;
+    [SerializeField] string myType;
+    private Image myRenderer;
     private Button button;
+    private void Start()
+    {
+        Initialize();
+    }
     public void Initialize()
     {
         myRenderer = GetComponentInChildren<Image>();
@@ -19,6 +24,7 @@ public class DecorationItem : MonoBehaviour
     }
     public void Change()
     {
+        HomeManager.Instance.SetAnimator(myType,myRenSprite);
         SoundManager.Instance.PlaySound(Sound.ButtonClick);
     }
 }
