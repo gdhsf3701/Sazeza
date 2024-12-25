@@ -45,6 +45,6 @@ public class ResetString : MonoBehaviour
     private void SetString()
     {
         int rand = Random.Range(0, hi.Length);
-        //text = hi[rand];
+        ToolkitManager.Instance.SetScore(hi[rand]);
     }
 }

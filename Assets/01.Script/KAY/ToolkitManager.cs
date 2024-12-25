@@ -91,9 +91,9 @@ public class ToolkitManager : MonoBehaviour
         ChangName.text = "당고 만들기 게임.exe : " + name;
     }
 
-    public void SetScore()
+    public void SetScore(string str)
     {
-       scroe.text = "현재점수 : " + GameManager.Instance.Score;
+        scroe.text = str;
     }
 
     public void SetResult()
