@@ -21,8 +21,8 @@ public class ToolkitManager : MonoBehaviour
     private VisualElement chang;
     private VisualElement pade;
     private Button gotoShop;
-
-
+    [SerializeField] GameObject UI;
+ 
 
     private void Awake()
     {
@@ -47,7 +47,7 @@ public class ToolkitManager : MonoBehaviour
     
     private void Start()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
+        var root = GetComponentInChildren <UIDocument>().rootVisualElement;
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
       chang = root.Q<VisualElement>("Chang");
@@ -60,10 +60,14 @@ public class ToolkitManager : MonoBehaviour
         toolTip3P = root.Q<Label>("Tooltip3p");
         tooltipPaper = root.Q<VisualElement>("TooltipPaper");
         gotoShop = root.Q<Button>("BackStart");
+        
+
 
         gotoShop.RegisterCallback<ClickEvent>(BackStage1);
         
         gotoShop.style.display = DisplayStyle.None;
+        UI.SetActive(false);
+
        
        
     }
@@ -106,6 +110,7 @@ public class ToolkitManager : MonoBehaviour
 
     public void GoStage1()
     {
+        UI.SetActive(true);
         SceneManager.LoadScene("Stage1");
         ChangeSceneName("1. 당고 재료 선택하기");
         StartCoroutine(Paper(3));
@@ -113,8 +118,16 @@ public class ToolkitManager : MonoBehaviour
     }
     public void BackStage1(ClickEvent evt)
     {
+           
         SceneManager.LoadScene("Stage1");
         gotoShop.style.display = DisplayStyle.None;
+
+    }
+
+    public void GoToMyHome()
+    {
+        SceneManager.LoadScene("MySweetHome");
+        UI.SetActive(false);
     }
     
     
