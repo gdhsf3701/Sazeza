@@ -16,6 +16,7 @@ public class Manual : MonoBehaviour
     public GameObject textAndImage;
     private TextMeshProUGUI tAITxt;
     public Image[] images;
+    public GameObject icon;
     public GameObject ex; //3¿¹½Ã
 
     private void Awake()
@@ -69,6 +70,7 @@ public class Manual : MonoBehaviour
         images[1].gameObject.SetActive(page == 2);
         textAndImage.SetActive(page <= 2);
         ex.SetActive(page == 3);
+        icon.SetActive(page == 0);
     }
 
     private void CloseM()
