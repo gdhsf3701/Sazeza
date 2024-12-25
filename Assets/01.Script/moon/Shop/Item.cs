@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     public IngredientTypeEnum MyIngredientType;
-    [SerializeField]private TextMeshProUGUI text;
-    [SerializeField]private Image myRenderer;
-    [SerializeField]private Button button;
+    private TextMeshProUGUI text;
+    private Image myRenderer;
+    private Button button;
     public void Initialize()
     {
         myRenderer = GetComponentInChildren<Image>();
