@@ -14,6 +14,7 @@ public class CostumeChanger : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         Change();
+        DontDestroyOnLoad(gameObject);
         
     }
    
@@ -30,11 +31,5 @@ public class CostumeChanger : MonoBehaviour
         animator.SetInteger("Hair", hair);
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            Change();
-        }
-    }
+   
 }
