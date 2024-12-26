@@ -21,7 +21,7 @@ public class CostumeChanger : MonoSingleton<CostumeChanger>
 
     public void Change()
     {
-        print(1);
+        
         cloth = Random.Range(1, 21);
         hat = Random.Range(1, 14);
         hair = Random.Range(1, 20);
