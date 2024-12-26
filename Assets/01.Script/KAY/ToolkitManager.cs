@@ -1,14 +1,13 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-using UnityEngine.XR;
 
-public class ToolkitManager : MonoBehaviour
+
+public class ToolkitManager : MonoSingleton<ToolkitManager>
 {
-   static public ToolkitManager Instance { get; private set; }
+  
     private Label ChangName;
     private Label scroe;
     private Label toolTip1;
@@ -24,15 +23,7 @@ public class ToolkitManager : MonoBehaviour
 
 
 
-    private void Awake()
-    {
-
-        if(Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-
-    }
+    
     public void opem()
     {
         StartCoroutine(Opne());
@@ -45,8 +36,8 @@ public class ToolkitManager : MonoBehaviour
     public void Start()
     {
 
-        var  root = GetComponent<UIDocument>().rootVisualElement;
-        ChangName = root.Q<Label>("ScenName");
+        var root = GetComponent<UIDocument>().rootVisualElement;
+        ChangName = root.Q<Label>("SceneName");
         scroe = root.Q<Label>("Score");
         chang = root.Q<VisualElement>("Chang");
         toolTip1 = root.Q<Label>("Tooltip1");
