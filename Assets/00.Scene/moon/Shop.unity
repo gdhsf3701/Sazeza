@@ -690,10 +690,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade
+  m_text: "\uC5C5\uADF8\uB808\uC774\uB4DC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
+  m_sharedMaterial: {fileID: 3723075745104991259, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 327793974355458736, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 4
   myType: GanFan
 --- !u!1 &92872941
@@ -4340,7 +4340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -3738581197466304234, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 1
   myType: Towal
 --- !u!1 &434524400
@@ -5040,7 +5040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -2451059113663655154, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 1
   myType: GanFan
 --- !u!1 &487058192
@@ -5224,131 +5224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 2948858559377020416, guid: 8978cb5a3201fb8478ab78b754ef00c4, type: 3}
   Parent: {fileID: 2021199875}
---- !u!1001 &506367959
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 837208431}
-    m_Modifications:
-    - target: {fileID: 477222643497175590, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_Name
-      value: DecorationItem (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 477222643497175590, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 506367962}
-  m_SourcePrefab: {fileID: 100100000, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
---- !u!224 &506367960 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1516489853055579216, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-  m_PrefabInstance: {fileID: 506367959}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &506367961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 477222643497175590, guid: 3c5548e23c9c1114d911950c8ada730a, type: 3}
-  m_PrefabInstance: {fileID: 506367959}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &506367962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506367961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
-  myRenSprite: 3
-  myType: An
 --- !u!1 &540424109
 GameObject:
   m_ObjectHideFlags: 0
@@ -5641,7 +5516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -3634031050268565811, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 2
   myType: Flower
 --- !u!1 &610747624
@@ -7967,7 +7842,6 @@ RectTransform:
   - {fileID: 1148554645}
   - {fileID: 1158166488}
   - {fileID: 1172395001}
-  - {fileID: 506367960}
   - {fileID: 1791807384}
   - {fileID: 582157333}
   - {fileID: 1571963167}
@@ -8629,7 +8503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -4467902100955460462, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 1
   myType: Midle
 --- !u!1001 &911261354
@@ -8754,7 +8628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 4568997483338974083, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 3
   myType: Midle
 --- !u!1 &921697501
@@ -8947,7 +8821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -8723952524914651941, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 2
   myType: Towal
 --- !u!1 &958020504
@@ -10374,7 +10248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 7201118498759001892, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 3
   myType: Towal
 --- !u!1001 &1158166487
@@ -10499,7 +10373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -5339626311036374423, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 1
   myType: An
 --- !u!1 &1162778615
@@ -10745,7 +10619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 3170032769223857819, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 4
   myType: Jibbong
 --- !u!1 &1167815691
@@ -11003,7 +10877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -1586495769176828304, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 2
   myType: An
 --- !u!1 &1175170417
@@ -11981,10 +11855,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ingredient
+  m_text: "\uC7AC\uB8CC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
+  m_sharedMaterial: {fileID: 3723075745104991259, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12898,7 +12772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -7244009128657006571, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 2
   myType: Jibbong
 --- !u!1 &1435259889
@@ -13943,10 +13817,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Promotion
+  m_text: "\uC2B9\uC9C4"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
+  m_sharedMaterial: {fileID: 3723075745104991259, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14276,7 +14150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 6568854988269855743, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 3
   myType: GanFan
 --- !u!1 &1543572631
@@ -14934,7 +14808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -6973846131003349394, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 3
   myType: Flower
 --- !u!1 &1644280277
@@ -15759,10 +15633,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Decoration
+  m_text: "\uC7A5\uC2DD"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
+  m_sharedMaterial: {fileID: 3723075745104991259, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16738,7 +16612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -4137467022383627813, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 1
   myType: Flower
 --- !u!1 &1792910423
@@ -16997,7 +16871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 5564660831431297590, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 3
   myType: Jibbong
 --- !u!1 &1806032701
@@ -18075,10 +17949,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: go1Stage
+  m_text: "1\uC2A4\uD14C\uC774\uC9C0\uB85C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
+  m_sharedMaterial: {fileID: 3723075745104991259, guid: 999f911278c38bd47bf8212989ccfd1a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18439,7 +18313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 8096724870923564765, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 2
   myType: GanFan
 --- !u!1 &1942099809
@@ -19950,7 +19824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: -5524113207062248467, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 2
   myType: Midle
 --- !u!1 &2138130532
@@ -20277,7 +20151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568ad1dab793b1040a91f3f4f111ef0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 131087530696581093, guid: df832e6b8b6e9ac43a322fb9fee864c1, type: 3}
   myRenSprite: 1
   myType: Jibbong
 --- !u!1660057539 &9223372036854775807
