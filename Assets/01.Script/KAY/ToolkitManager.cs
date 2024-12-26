@@ -19,10 +19,10 @@ public class ToolkitManager : MonoBehaviour
     private Label toolTip3P;
     private VisualElement tooltipPaper;
     private VisualElement chang;
-    private VisualElement pade;
     private Button gotoShop;
-    [SerializeField] GameObject UI;
- 
+
+
+
 
     private void Awake()
     {
@@ -32,7 +32,6 @@ public class ToolkitManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        DontDestroyOnLoad(gameObject);
     }
     public void opem()
     {
@@ -43,31 +42,32 @@ public class ToolkitManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         gotoShop.style.display = DisplayStyle.Flex;
     }
-
-    
-    private void Start()
+    public void start2()
     {
-        var root = GetComponentInChildren <UIDocument>().rootVisualElement;
+
+        var  root = GetComponent<UIDocument>().rootVisualElement;
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
-      chang = root.Q<VisualElement>("Chang");
-        pade = root.Q<VisualElement>("Pade");
+        chang = root.Q<VisualElement>("Chang");
         toolTip1 = root.Q<Label>("Tooltip1");
-        toolTip2= root.Q<Label>("Tooltip2");
+        toolTip2 = root.Q<Label>("Tooltip2");
         toolTip3 = root.Q<Label>("Tooltip3");
         toolTip1P = root.Q<Label>("Tooltip1p");
         toolTip2P = root.Q<Label>("Tooltip2p");
         toolTip3P = root.Q<Label>("Tooltip3p");
         tooltipPaper = root.Q<VisualElement>("TooltipPaper");
         gotoShop = root.Q<Button>("BackStart");
-        
+
 
 
         gotoShop.RegisterCallback<ClickEvent>(BackStage1);
-        
-        gotoShop.style.display = DisplayStyle.None;
-        UI.SetActive(false);
 
+        gotoShop.style.display = DisplayStyle.None;
+
+    }
+
+    private void Start()
+    {
        
        
     }
@@ -110,7 +110,6 @@ public class ToolkitManager : MonoBehaviour
 
     public void GoStage1()
     {
-        UI.SetActive(true);
         SceneManager.LoadScene("Stage1");
         ChangeSceneName("1. 당고 재료 선택하기");
         StartCoroutine(Paper(3));
@@ -119,15 +118,9 @@ public class ToolkitManager : MonoBehaviour
     public void BackStage1(ClickEvent evt)
     {
            
-        SceneManager.LoadScene("Stage1");
         gotoShop.style.display = DisplayStyle.None;
+        GoStage1();
 
-    }
-
-    public void GoToMyHome()
-    {
-        SceneManager.LoadScene("MySweetHome");
-        UI.SetActive(false);
     }
     
     
