@@ -19,8 +19,8 @@ public class ToolkitManager : MonoBehaviour
     private Label toolTip3P;
     private VisualElement tooltipPaper;
     private VisualElement chang;
-    private Button gotoShop;
 
+   public static int p = 0;
 
 
 
@@ -40,9 +40,9 @@ public class ToolkitManager : MonoBehaviour
     IEnumerator Opne()
     {
         yield return new WaitForSeconds(4f);
-        gotoShop.style.display = DisplayStyle.Flex;
+       
     }
-    public void start2()
+    public void Start()
     {
 
         var  root = GetComponent<UIDocument>().rootVisualElement;
@@ -56,24 +56,18 @@ public class ToolkitManager : MonoBehaviour
         toolTip2P = root.Q<Label>("Tooltip2p");
         toolTip3P = root.Q<Label>("Tooltip3p");
         tooltipPaper = root.Q<VisualElement>("TooltipPaper");
-        gotoShop = root.Q<Button>("BackStart");
-
-
-
-        gotoShop.RegisterCallback<ClickEvent>(BackStage1);
-
-        gotoShop.style.display = DisplayStyle.None;
+        if(p == 0)
+        {
+            ChangeSceneName("1. 당고 재료 선택하기");
+            StartCoroutine(Paper(3));
+        }
 
     }
 
-    private void Start()
-    {
-       
-       
-    }
+  
     public void timer2(int a)
     {
-        StartCoroutine(Paper(a));
+        StartCoroutine(Paper(a));   
     }
     public IEnumerator Paper(int a )
     {
@@ -115,13 +109,7 @@ public class ToolkitManager : MonoBehaviour
         StartCoroutine(Paper(3));
 
     }
-    public void BackStage1(ClickEvent evt)
-    {
-           
-        gotoShop.style.display = DisplayStyle.None;
-        GoStage1();
-
-    }
+   
     
     
     public void SetTooltip(string a , int p)
