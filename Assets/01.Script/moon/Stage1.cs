@@ -20,12 +20,14 @@ public class Stage1 : MonoBehaviour
         {
             Ingredient.Add(IngredentSetting());
         }
-        ToolkitManager.Instance.ChangeSceneName("1. 당고 재료 선택하기");
       
-        ToolTipSetting();
         GameManager.Instance.OnIngredientAdd += ScoreUP;
         SoundManager.Instance.PlaySound(Sound.BellRing);
         SoundManager.Instance.PlaySound(Sound.Paper);
+    }
+    private void Start()
+    {
+        ToolTipSetting();
     }
     private void ScoreUP(IngredientTypeEnum add)
     {

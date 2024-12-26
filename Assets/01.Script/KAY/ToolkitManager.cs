@@ -19,7 +19,7 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
     private VisualElement tooltipPaper;
     private VisualElement chang;
 
-   public static int p = 0;
+   public static int pip = 0;
 
 
 
@@ -33,9 +33,13 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
         yield return new WaitForSeconds(4f);
        
     }
-    public void Start()
-    {
 
+    public void pip0()
+    {
+        pip = 0;
+    }
+    public void Awake()
+    {
         var root = GetComponent<UIDocument>().rootVisualElement;
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
@@ -47,10 +51,11 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
         toolTip2P = root.Q<Label>("Tooltip2p");
         toolTip3P = root.Q<Label>("Tooltip3p");
         tooltipPaper = root.Q<VisualElement>("TooltipPaper");
-        if(p == 0)
+        if(pip == 0)
         {
             ChangeSceneName("1. 당고 재료 선택하기");
             StartCoroutine(Paper(3));
+            pip++;
         }
 
     }
@@ -77,7 +82,6 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
 
     public void ChangeSceneName(string name)
     {
-        print(chang != null);
         ChangName.text = "당고 만들기 게임.exe : " + name;
     }
 
@@ -98,6 +102,7 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
     {
         SceneManager.LoadScene("Stage1");
         ChangeSceneName("1. 당고 재료 선택하기");
+        pip = 0;
         StartCoroutine(Paper(3));
 
     }

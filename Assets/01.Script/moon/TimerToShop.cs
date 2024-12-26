@@ -9,11 +9,15 @@ public class TimerToShop : MonoBehaviour
     private void Awake()
     {
         ToolkitManager.Instance.timer2(5);
-        ToolkitManager.Instance.ChangeSceneName("5. 당고 판매 결산");
         ToolkitManager.Instance.SetResult();
         GameManager.Instance.ResetIngredient();
         SoundManager.Instance.PlaySound(Sound.Tada);
         SoundManager.Instance.PlaySound(Sound.Receipt);
+    }
+    private void Start()
+    {
+        
+        ToolkitManager.Instance.ChangeSceneName("5. 당고 판매 결산");
     }
     private void Update()
     {
