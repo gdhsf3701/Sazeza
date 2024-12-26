@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class CostumeChanger : MonoBehaviour
+public class CostumeChanger : MonoSingleton<CostumeChanger>
 {
 
 

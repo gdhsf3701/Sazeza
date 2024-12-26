@@ -6,33 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/00.Scene/moon/Stage1.unity
+    path: Assets/00.Scene/MainScene/Stage1.unity
     guid: 56989a277a88df94a9284a4d10086744
   - enabled: 1
-    path: Assets/00.Scene/moon/Stage2.unity
+    path: Assets/00.Scene/MainScene/Stage2.unity
     guid: 867f534c8059d2f41b277761dbeff674
-  - enabled: 1
+  - enabled: 0
     path: Assets/00.Scene/moon/Stage3.unity
     guid: 88b9201337d64b24fbbd2233658128f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/00.Scene/JYE/Stage4.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/00.Scene/moon/Stage5.unity
+    path: Assets/00.Scene/MainScene/Stage5.unity
     guid: 5a9754f7f7d64f342a7e3f49ac379d7f
   - enabled: 1
-    path: Assets/00.Scene/moon/Shop.unity
+    path: Assets/00.Scene/MainScene/Shop.unity
     guid: f664e64ece0f6a24b8a68ec0573cd320
   - enabled: 1
-    path: Assets/00.Scene/moon/Stage.unity
+    path: Assets/00.Scene/MainScene/Stage.unity
     guid: f8fc4a0ae1be39e40b2a01afd33397f4
   - enabled: 1
     path: Assets/00.Scene/moon/sss.unity
     guid: 2865b4b9996bee34189296a072dc1e0a
   - enabled: 1
-    path: Assets/00.Scene/KAY/MySweetHome.unity
+    path: Assets/00.Scene/MainScene/MySweetHome.unity
     guid: 6facff092b74e554b8137d1d6738abc8
   - enabled: 1
-    path: Assets/00.Scene/JYE/Start.unity
+    path: Assets/00.Scene/MainScene/Start.unity
     guid: 67148b16a92013345aecdb5f8246155b
   m_configObjects: {}
