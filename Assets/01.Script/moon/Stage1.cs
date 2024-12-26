@@ -14,7 +14,7 @@ public class Stage1 : MonoBehaviour
     private float timer = 3f;
     private bool isFirst = true;
     private int nowIngredientCount => GameManager.Instance.Ingredient.Count;
-    private void Start()
+    private void Awake()
     {
         for (int i = 0; i < 3; i++)
         {
