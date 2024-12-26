@@ -37,7 +37,7 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
     {
 
         var root = GetComponent<UIDocument>().rootVisualElement;
-        ChangName = root.Q<Label>("SceneName");
+        ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");
         chang = root.Q<VisualElement>("Chang");
         toolTip1 = root.Q<Label>("Tooltip1");
@@ -77,6 +77,7 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
 
     public void ChangeSceneName(string name)
     {
+        print(chang != null);
         ChangName.text = "당고 만들기 게임.exe : " + name;
     }
 
