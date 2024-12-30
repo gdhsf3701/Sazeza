@@ -13,6 +13,7 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (IsDestroyed)
             {
+                Debug.Log("ÆÄ±«");
                 _instance = null;
                 Destroy(GameObject.FindObjectOfType<T>());
             }
@@ -33,7 +34,7 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
     }
     private void OnDisable()
     {
-        IsDestroyed = true;
+        //IsDestroyed = true;
 
     }
 }

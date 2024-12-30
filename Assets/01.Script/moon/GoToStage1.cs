@@ -7,6 +7,6 @@ public class GoToStage1 : MonoBehaviour
 {
     public void Scene1()    
     {
-        ToolkitManager.Instance.GoStage1();
+        SceneManager.LoadScene("MySweetHome");
     }
 }

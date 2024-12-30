@@ -40,6 +40,7 @@ public class ToolkitManager : MonoSingleton<ToolkitManager>
     }
     public void Awake()
     {
+        Debug.Log("ttool");
         var root = GetComponent<UIDocument>().rootVisualElement;
         ChangName = root.Q<Label>("ScenName");
         scroe = root.Q<Label>("Score");

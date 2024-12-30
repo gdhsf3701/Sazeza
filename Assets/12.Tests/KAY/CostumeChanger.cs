@@ -1,5 +1,7 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class CostumeChanger : MonoSingleton<CostumeChanger>
 {
@@ -15,9 +17,16 @@ public class CostumeChanger : MonoSingleton<CostumeChanger>
         animator = GetComponent<Animator>();
         Change();
         DontDestroyOnLoad(gameObject);
-        
+        if(Instance != null)
+            Destroy(Instance);
+      //  CostumeChanger.Instance = this;
     }
-   
+
+    private void Update()
+    {
+       
+    }
+
 
     public void Change()
     {
